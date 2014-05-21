@@ -1,0 +1,32 @@
+\name{calcWatZ}
+\alias{calcWatZ}
+\title{Convert Tanner crab size to weight.}
+\usage{
+calcWatZ(z, sex, maturity, male = list(immature = list(a = 0.00016, b =
+  3.136), mature = list(a = 0.00016, b = 3.136)), female = list(immature =
+  list(a = 0.00064, b = 2.794), mature = list(a = 0.00034, b = 2.956)))
+}
+\arguments{
+  \item{z}{: vector of sizes (mm CW)}
+
+  \item{sex}{: 'MALE' or 'FEMALE'}
+
+  \item{maturity}{: 'IMMATURE' or 'MATURE'}
+
+  \item{male}{: list of regression coefficients for
+  immature, mature crab (see details)}
+
+  \item{male}{: list of regression coefficients for
+  immature, mature crab (see details)}
+}
+\value{
+a vector of weights corresponding to the input sizes
+}
+\description{
+Power-law functions for Tanner crab weight-at-size (g) by
+sex and maturity based on Rugolo and Turnock's parameters.
+}
+\details{
+
+}
+

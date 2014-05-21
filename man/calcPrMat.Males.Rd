@@ -1,0 +1,28 @@
+\name{calcPrMat.Males}
+\alias{calcPrMat.Males}
+\title{Function to calculate Pr(mature|z) for new shell males.}
+\usage{
+calcPrMat.Males(z, shell_condition, z50 = 102.32849563, slp = 0.06440451)
+}
+\arguments{
+  \item{z}{- size (mm CW)}
+
+  \item{shell_condition}{- \sQuote{NEW_SHELL} or
+  \sQuote{OLD_SHELL}}
+
+  \item{z50}{- size at 50% maturity}
+
+  \item{slp}{- slope for logistic curve (\eqn{mm^{-1}})}
+}
+\value{
+a vector of Pr(mature|z) corresponding to the input sizes
+}
+\description{
+Logistic function for Pr(mature|size) for new shell males
+based on Rugolo and Turnock's fitted logistic
+curve.Parameters are based on my fit to their curve.
+}
+\details{
+
+}
+
