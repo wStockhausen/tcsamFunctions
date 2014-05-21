@@ -10,7 +10,7 @@ calc.prMat.Males(z, shell_condition, z50 = 102.32849563, slp = 0.06440451)
   \item{shell_condition}{- \sQuote{NEW_SHELL} or
   \sQuote{OLD_SHELL}}
 
-  \item{z50}{- size at 50% maturity}
+  \item{z50}{- size at 50\% maturity}
 
   \item{slp}{- slope for logistic curve (\eqn{mm^{-1}})}
 }

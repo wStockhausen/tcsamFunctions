@@ -7,7 +7,7 @@
 #'
 #'@param z - size (mm CW)
 #'@param shell_condition - \sQuote{NEW_SHELL} or \sQuote{OLD_SHELL}
-#'@param z50 - size at 50% maturity
+#'@param z50 - size at 50\% maturity
 #'@param slp - slope for logistic curve (\eqn{mm^{-1}})
 #'
 #'@return a vector of Pr(mature|z) corresponding to the input sizes
