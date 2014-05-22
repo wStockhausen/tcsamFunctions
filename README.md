@@ -1,4 +1,4 @@
 tcsamFunctions
 ==============
 
-A collection of R functions related to data processing for the BSAI Tanner crab stock assessment.
+Sources for an R package with functions related to the BSAI Tanner crab stock assessment.
