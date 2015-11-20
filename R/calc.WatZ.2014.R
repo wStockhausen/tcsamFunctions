@@ -1,14 +1,14 @@
 #'
-#'@title Convert Tanner crab size to weight using the current (2015) relationships.
+#'@title Convert Tanner crab size to weight based on the 2014 assessment (Rugolo and Turnock).
 #'
 #'@description Power-law functions for Tanner crab weight-at-size (g) by sex and maturity
-#'   based on 2015 NMFS survey.
+#'   based on the 2014 assessment (Rugolo and Turnock's parameters).
 #'   
 #'@param z : vector of sizes (mm CW)
 #'@param sex : 'MALE' or 'FEMALE'
 #'@param maturity : 'IMMATURE' or 'MATURE'
 #'@param male : list of regression coefficients for immature, mature crab (see details)
-#'@param male : list of regression coefficients for immature, mature crab (see details)
+#'@param female : list of regression coefficients for immature, mature crab (see details)
 #'
 #'@return a vector of weights corresponding to the input sizes
 #'
@@ -18,11 +18,11 @@
 #'@export
 #'
 #-----------------------------------------------------------
-calc.WatZ<-function(z,sex,maturity,
-                    male=list(immature=list(a=0.00027,b=3.022134),
-                                mature=list(a=0.00027,b=3.022134)),
-                    female=list(immature=list(a=0.000562,b=2.816928),
-                                  mature=list(a=0.000441,b=2.898686))){
+calc.WatZ.2014<-function(z,sex,maturity,
+                        male=list(immature=list(a=0.00016,b=3.136),
+                                    mature=list(a=0.00016,b=3.136)),
+                        female=list(immature=list(a=0.00064,b=2.794),
+                                      mature=list(a=0.00034,b=2.956))){
     idx.m<-toupper(sex)==  'MALE';
     idx.f<-toupper(sex)=='FEMALE';
     idx.imm<-toupper(maturity)=='IMMATURE';
