@@ -3,20 +3,21 @@
 #'
 #'@description Function to plot a growth transition matrix as an image.
 #'
-#'@importFrom reshape2 melt
-#'@import ggplot2
+#'@param prGr - growth transition matrix
+#'@param log - flag to plot ln-scale values
+#'
 #'@importFrom RColorBrewer brewer.pal
+#'@importFrom reshape2 melt
+#'
+#'@import ggplot2
 #'
 #'@export
 #'
 plotSizeTransitionMatrix<-function(prGr,log=FALSE){
-#     require('reshape2');
-#     require('ggplot2');
-#     require('RColorBrewer')
+
+    colors <- brewer.pal(11,"Spectral")
     
-    colors <- RColorBrewer::brewer.pal(11,"Spectral")
-    
-    mPrGr<-reshape2::melt(prGr);
+    mPrGr<-melt(prGr);
     if (log) {mPrGr$value=log(mPrGr$value);}
     
     p<-ggplot(mPrGr,aes(from,to,z=value,fill=value)) +
@@ -29,6 +30,6 @@ plotSizeTransitionMatrix<-function(prGr,log=FALSE){
         theme(plot.background = element_rect(fill = "grey90"), 
               legend.background = element_rect(fill = "grey90")) + 
         geom_contour() + 
-        geom_line(data=reshape2::melt(as.numeric(rownames(prGr))),mapping=aes(x=value,y=value))
+        geom_line(data=melt(as.numeric(rownames(prGr))),mapping=aes(x=value,y=value))
     print(p)
 }

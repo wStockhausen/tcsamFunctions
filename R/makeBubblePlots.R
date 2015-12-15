@@ -24,7 +24,7 @@ makeBubblePlots<-function(lst,
                          normalize=FALSE,
                          xlims=NULL,
                          ylims=NULL,
-                         colors=RColorBrewer::brewer.pal(11,"Spectral"),
+                         colors=brewer.pal(11,"Spectral"),
                          alpha=0.5,
                          showPlot=TRUE){
     if (is.list(lst)){
@@ -42,7 +42,7 @@ makeBubblePlots<-function(lst,
             }
         }
         
-        dfr<-reshape2::melt(lst);
+        dfr<-melt(lst);
         nms<-names(dfr);
 #        cat('names = ',nms,'\n')
         nms[which(names(dfr)=='L1')]<-fill;
@@ -58,7 +58,7 @@ makeBubblePlots<-function(lst,
                 if (sm>0) {m[,cn]<-m[,cn]/sm;}
             }
         }        
-        dfr<-reshape2::melt(m);
+        dfr<-melt(m);
         dfr[[fill]]<-fill;
     }
     
