@@ -7,7 +7,10 @@ Author: William Stockhausen
 Maintainer: William Stockhausen <william.stockahusen@noaa.gov>
 Description: This package contains a collection of R functions related to the
     BSAI Tanner crab stock assessment.
-License: MIT
+License: MIT + file LICENSE
 Imports:
-    graphics
+    ggplot2,
+    graphics,
+    RColorBrewer,
+    reshape2
 RoxygenNote: 5.0.1
