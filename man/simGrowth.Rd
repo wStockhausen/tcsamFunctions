@@ -11,4 +11,3 @@ simGrowth(ny = 21, zAtR = 1, M = 0.23, prGr = NULL, grCoeffs = NULL,
 \description{
 Function to simulate growth trajectories based on a size transition matrix.
 }
-

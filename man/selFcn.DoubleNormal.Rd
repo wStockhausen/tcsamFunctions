@@ -19,4 +19,3 @@ Function to calculate (and optionally plot the components of) a double normal se
 \details{
 TBD!!
 }
-

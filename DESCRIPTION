@@ -1,7 +1,7 @@
 Package: tcsamFunctions
 Type: Package
 Title: Functions related to the BSAI Tanner crab stock assessment (2015+).
-Version: 1.1.1
+Version: 2015.12.15
 Date: 2015-12-15
 Author: William Stockhausen
 Maintainer: William Stockhausen <william.stockahusen@noaa.gov>
@@ -13,4 +13,4 @@ Imports:
     graphics,
     RColorBrewer,
     reshape2
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

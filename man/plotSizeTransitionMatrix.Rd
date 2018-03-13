@@ -14,4 +14,3 @@ plotSizeTransitionMatrix(prGr, log = FALSE)
 \description{
 Function to plot a growth transition matrix as an image.
 }
-

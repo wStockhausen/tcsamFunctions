@@ -11,4 +11,3 @@ calcSizeTransitionMatrix(coeffs = list(type = "LinearGrowthIncrement", a =
 \description{
 Function to calculate a size transition matrix.
 }
-

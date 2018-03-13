@@ -23,4 +23,3 @@ then pr(mature|z) is the probability that a crab that just molted to size z also
 coeffs is a named list with the 1st element 'type' identifying the function type (e.g. 'logistic')
 and remaining elements as function coefficients (e.g., slope, z50)
 }
-

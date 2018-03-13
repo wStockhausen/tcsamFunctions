@@ -13,4 +13,3 @@ makeBubblePlots(lst, x = "year", x.lbl = x, y = "size", y.lbl = y,
 \description{
 Function to plot a matrix or list of matrices using a bubble plot.
 }
-

@@ -30,4 +30,3 @@ Power-law functions for Tanner crab weight-at-size (g) by sex and maturity
 'male' and 'female' are lists with named elements 'a' and 'b', whose values
 reflect the parameters in the eq: w = a*z^b
 }
-

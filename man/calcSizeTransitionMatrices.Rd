@@ -12,4 +12,3 @@ calcSizeTransitionMatrices(coeffs = list(MALE = list(a = 0.42577, b =
 \description{
 Function to calculate sex-specific size transition matrices for Tanner crab.
 }
-
