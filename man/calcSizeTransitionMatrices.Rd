@@ -5,8 +5,8 @@
 \title{Calculate size transition matrices for Tanner crab.}
 \usage{
 calcSizeTransitionMatrices(coeffs = list(MALE = list(a = 0.42577, b =
-  0.971389, beta = 0.75, type = "LinearGrowthIncrement"), FEMALE = list(a = 0.7,
-  b = 0.883118, beta = 0.75, type = "LinearGrowthIncrement")),
+  0.971389, beta = 0.75, type = "LinearGrowthIncrement"), FEMALE = list(a =
+  0.7, b = 0.883118, beta = 0.75, type = "LinearGrowthIncrement")),
   sizes = seq(from = 27.5, to = 182.5, by = 5))
 }
 \description{

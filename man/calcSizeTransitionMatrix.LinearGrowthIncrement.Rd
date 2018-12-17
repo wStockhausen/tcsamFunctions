@@ -6,8 +6,9 @@
 \title{Calculate a size transition matrix.}
 \usage{
 calcSizeTransitionMatrix.LinearGrowthIncrement(a = 0.7, b = 0.883118,
-  beta = 0.75, maxDZ = 50, coeffs = NULL, sizes = seq(from = 27.5, to =
-  182.5, by = 5), showPlot = TRUE, log = FALSE, colors = rainbow(1000))
+  beta = 0.75, maxDZ = 50, coeffs = NULL, sizes = seq(from = 27.5,
+  to = 182.5, by = 5), showPlot = TRUE, log = FALSE,
+  colors = rainbow(1000))
 }
 \arguments{
 \item{a}{-}
