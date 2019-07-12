@@ -1,10 +1,10 @@
 Package: tcsamFunctions
 Type: Package
 Title: Functions related to the BSAI Tanner crab stock assessment (2015+).
-Version: 2018.12.14
-Date: 2018-12-14
+Version: 2019.07.12
+Date: 2019-07-12
 Author: William Stockhausen
-Maintainer: William Stockhausen <william.stockahusen@noaa.gov>
+Maintainer: William Stockhausen <william.stockhausen@noaa.gov>
 Description: This package contains a collection of R functions related to the
     BSAI Tanner crab stock assessment.
 License: MIT + file LICENSE
@@ -13,4 +13,4 @@ Imports:
     graphics,
     RColorBrewer,
     reshape2
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1

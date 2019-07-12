@@ -11,6 +11,12 @@ plotSizeTransitionMatrix(prGr, log = FALSE)
 
 \item{log}{- flag to plot ln-scale values}
 }
+\value{
+a ggplot2 object
+}
 \description{
 Function to plot a growth transition matrix as an image.
+}
+\details{
+None.
 }

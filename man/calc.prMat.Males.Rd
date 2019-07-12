@@ -21,5 +21,8 @@ a vector of Pr(mature|z) corresponding to the input sizes
 }
 \description{
 Logistic function for Pr(mature|size) for new shell males
-  based on Rugolo and Turnock's fitted logistic curve.Parameters are based on my fit to their curve.
+  based on Rugolo and Turnock's fitted logistic curve. Parameters are based on my fit to their curve.
+}
+\details{
+Default parameter values are based on my fit to Rugolo and Turnock's fitted logistic curve.
 }

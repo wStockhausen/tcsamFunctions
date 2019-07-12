@@ -10,7 +10,7 @@
 #'@param male : list of regression coefficients for immature, mature crab (see details)
 #'@param female : list of regression coefficients for immature, mature crab (see details)
 #'
-#'@return a vector of weights corresponding to the input sizes, sexes, and maturity states
+#'@return a vector of weights in g corresponding to the input sizes, sexes, and maturity states
 #'
 #'@details 'male' and 'female' are lists with named elements 'a' and 'b', whose values
 #'reflect the parameters in the eq: w = a*z^b

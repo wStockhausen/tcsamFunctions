@@ -2,7 +2,7 @@
 #'@title Function to calculate Pr(mature|z) for new shell males.
 #'
 #'@description Logistic function for Pr(mature|size) for new shell males
-#'   based on Rugolo and Turnock's fitted logistic curve.Parameters are based on my fit to their curve.
+#'   based on Rugolo and Turnock's fitted logistic curve. Parameters are based on my fit to their curve.
 
 #'
 #'@param z - size (mm CW)
@@ -11,6 +11,8 @@
 #'@param slp - slope for logistic curve (\eqn{mm^{-1}})
 #'
 #'@return a vector of Pr(mature|z) corresponding to the input sizes
+#'
+#'@details Default parameter values are based on my fit to Rugolo and Turnock's fitted logistic curve.
 #'
 #'@export
 #'

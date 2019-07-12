@@ -9,6 +9,24 @@ calcSizeTransitionMatrix(coeffs = list(type = "LinearGrowthIncrement", a
   to = 185, by = 1), showPlot = FALSE, log = FALSE,
   colors = rainbow(1000))
 }
+\arguments{
+\item{coeffs}{- list including function 'type' and parameter values}
+
+\item{sizes}{- vector of sizes at which to calculate the sie transition probabilities}
+
+\item{showPlot}{- flag (T/F) to plot the matrix}
+
+\item{log}{- flag to use ln-scale on plot}
+
+\item{colors}{- paleete to use to color the plot}
+}
+\value{
+
+}
 \description{
 Function to calculate a size transition matrix.
+}
+\details{
+If 
+* 'type'='LinearGrowthIncrement', calls \code{calcSizeTransitionMatrix.LinearGrowthIncrement}.
 }

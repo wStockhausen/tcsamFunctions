@@ -6,6 +6,10 @@
 #'@param prGr - growth transition matrix
 #'@param log - flag to plot ln-scale values
 #'
+#'@return a ggplot2 object
+#'
+#'@details None.
+#'
 #'@importFrom RColorBrewer brewer.pal
 #'@importFrom reshape2 melt
 #'

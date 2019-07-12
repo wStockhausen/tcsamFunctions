@@ -11,6 +11,11 @@
 #'@param bins - size bins to include in matrix
 #'@param showPlot - flag (T/F) to plot matrix
 #'@param log - flag to plot ln-scale matrix (in conjunction w/ showPlot)
+#'@param colors - palette to plot matrix with
+#'
+#'@return matrix
+#'
+#'@details Approximates the gamma cdf using the pdf, as in old TCSAM.
 #'
 #'@export
 #'

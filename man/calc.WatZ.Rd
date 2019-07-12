@@ -21,7 +21,7 @@ calc.WatZ(z, sex, maturity, male = list(immature = list(a = 0.00027, b =
 \item{female}{: list of regression coefficients for immature, mature crab (see details)}
 }
 \value{
-a vector of weights corresponding to the input sizes, sexes, and maturity states
+a vector of weights in g corresponding to the input sizes, sexes, and maturity states
 }
 \description{
 Power-law functions for Tanner crab weight-at-size (g) by sex and maturity

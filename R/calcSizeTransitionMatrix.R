@@ -1,9 +1,20 @@
+#' 
+#' @title Calculate a size transition matrix.
+#' 
+#' @description Function to calculate a size transition matrix.
 #'
-#'@title Calculate a size transition matrix.
+#' @param coeffs - list including function 'type' and parameter values
+#' @param sizes - vector of sizes at which to calculate the sie transition probabilities
+#' @param showPlot - flag (T/F) to plot the matrix
+#' @param log - flag to use ln-scale on plot
+#' @param colors - paleete to use to color the plot
+#' 
+#' @return 
+#' 
+#' @details If 
+#' * 'type'='LinearGrowthIncrement', calls \code{calcSizeTransitionMatrix.LinearGrowthIncrement}.
 #'
-#'@description Function to calculate a size transition matrix.
-#'
-#'@export
+#' @export
 #'
 calcSizeTransitionMatrix<-function(coeffs=list(type='LinearGrowthIncrement',
                                                a=0.70000,

@@ -25,8 +25,16 @@ calcSizeTransitionMatrix.LinearGrowthIncrement(a = 0.7, b = 0.883118,
 
 \item{log}{- flag to plot ln-scale matrix (in conjunction w/ showPlot)}
 
+\item{colors}{- palette to plot matrix with}
+
 \item{bins}{- size bins to include in matrix}
+}
+\value{
+matrix
 }
 \description{
 Function to calculate a size transition matrix
+}
+\details{
+Approximates the gamma cdf using the pdf, as in old TCSAM.
 }

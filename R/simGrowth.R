@@ -3,6 +3,22 @@
 #'
 #'@description Function to simulate growth trajectories based on a size transition matrix.
 #'
+#'@param ny - number of years to simulate
+#'@param zAtR - size at recruitment
+#'@param M - annual rate of natural mortality
+#'@param prGr - size transition matrix
+#'@param grCoeffs - growth coefficients (if prGr is not given)
+#'@param prM2M - probability of molt-to-maturity 
+#'@param m2mCoeffs - molt-to-maturity coefficients (if prM2M is not given)
+#'@param sizes - vector of size bins
+#'@param showPlot - flag to plot simulation
+#'@param normalize - flag to normalize annual size comps to 1
+#'
+#'@return list with matrices nAtZI and nAtZM representing immature and mature crab abundance 
+#'as a function of elapsed time.
+#'
+#'@details Essentially calculates a cohort progression
+#' 
 #'@export
 #'
 simGrowth<-function(ny=21,zAtR=1,M=0.23,

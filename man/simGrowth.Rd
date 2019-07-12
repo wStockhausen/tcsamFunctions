@@ -8,6 +8,34 @@ simGrowth(ny = 21, zAtR = 1, M = 0.23, prGr = NULL,
   grCoeffs = NULL, prM2M = NULL, m2mCoeffs = NULL, sizes = seq(from
   = 25, to = 185, by = 1), showPlot = TRUE, normalize = FALSE)
 }
+\arguments{
+\item{ny}{- number of years to simulate}
+
+\item{zAtR}{- size at recruitment}
+
+\item{M}{- annual rate of natural mortality}
+
+\item{prGr}{- size transition matrix}
+
+\item{grCoeffs}{- growth coefficients (if prGr is not given)}
+
+\item{prM2M}{- probability of molt-to-maturity}
+
+\item{m2mCoeffs}{- molt-to-maturity coefficients (if prM2M is not given)}
+
+\item{sizes}{- vector of size bins}
+
+\item{showPlot}{- flag to plot simulation}
+
+\item{normalize}{- flag to normalize annual size comps to 1}
+}
+\value{
+list with matrices nAtZI and nAtZM representing immature and mature crab abundance 
+as a function of elapsed time.
+}
 \description{
 Function to simulate growth trajectories based on a size transition matrix.
+}
+\details{
+Essentially calculates a cohort progression
 }
