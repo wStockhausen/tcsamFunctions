@@ -4,11 +4,26 @@
 \alias{makeBubblePlots}
 \title{Make bubble plots of a matrix or list of matrices}
 \usage{
-makeBubblePlots(lst, x = "year", x.lbl = x, y = "size", y.lbl = y,
-  z = "value", z.lbl = z, fill = "sex", fill.lbl = fill, by = "",
-  by.lbl = by, scaleBy = 1, normalize = FALSE, xlims = NULL,
-  ylims = NULL, colors = brewer.pal(11, "Spectral"), alpha = 0.5,
-  showPlot = TRUE)
+makeBubblePlots(
+  lst,
+  x = "year",
+  x.lbl = x,
+  y = "size",
+  y.lbl = y,
+  z = "value",
+  z.lbl = z,
+  fill = "sex",
+  fill.lbl = fill,
+  by = "",
+  by.lbl = by,
+  scaleBy = 1,
+  normalize = FALSE,
+  xlims = NULL,
+  ylims = NULL,
+  colors = brewer.pal(11, "Spectral"),
+  alpha = 0.5,
+  showPlot = TRUE
+)
 }
 \description{
 Function to plot a matrix or list of matrices using a bubble plot.

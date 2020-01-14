@@ -4,8 +4,10 @@
 \alias{calcPrMoltToMaturity}
 \title{Calculate the probability at crab size z for the molt to maturity, pr(mature|z).}
 \usage{
-calcPrMoltToMaturity(coeffs = list(type = "logistic", z50 = 130, slope =
-  0.1), sizes = seq(from = 25, to = 185, by = 1))
+calcPrMoltToMaturity(
+  coeffs = list(type = "logistic", z50 = 130, slope = 0.1),
+  sizes = seq(from = 25, to = 185, by = 1)
+)
 }
 \arguments{
 \item{coeffs}{- a named list identifying function type and coefficient values}

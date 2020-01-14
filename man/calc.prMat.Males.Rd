@@ -4,8 +4,7 @@
 \alias{calc.prMat.Males}
 \title{Function to calculate Pr(mature|z) for new shell males.}
 \usage{
-calc.prMat.Males(z, shell_condition, z50 = 102.32849563,
-  slp = 0.06440451)
+calc.prMat.Males(z, shell_condition, z50 = 102.32849563, slp = 0.06440451)
 }
 \arguments{
 \item{z}{- size (mm CW)}

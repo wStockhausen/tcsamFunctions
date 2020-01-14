@@ -4,10 +4,14 @@
 \alias{calcSizeTransitionMatrix}
 \title{Calculate a size transition matrix.}
 \usage{
-calcSizeTransitionMatrix(coeffs = list(type = "LinearGrowthIncrement", a
-  = 0.7, b = 0.883118, beta = 0.75, maxDZ = 50), sizes = seq(from = 25,
-  to = 185, by = 1), showPlot = FALSE, log = FALSE,
-  colors = rainbow(1000))
+calcSizeTransitionMatrix(
+  coeffs = list(type = "LinearGrowthIncrement", a = 0.7, b = 0.883118, beta = 0.75,
+    maxDZ = 50),
+  sizes = seq(from = 25, to = 185, by = 1),
+  showPlot = FALSE,
+  log = FALSE,
+  colors = rainbow(1000)
+)
 }
 \arguments{
 \item{coeffs}{- list including function 'type' and parameter values}

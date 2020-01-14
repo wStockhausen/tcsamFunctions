@@ -4,9 +4,18 @@
 \alias{simGrowth}
 \title{Simulate individual growth trajectories based on a size transition matrix.}
 \usage{
-simGrowth(ny = 21, zAtR = 1, M = 0.23, prGr = NULL,
-  grCoeffs = NULL, prM2M = NULL, m2mCoeffs = NULL, sizes = seq(from
-  = 25, to = 185, by = 1), showPlot = TRUE, normalize = FALSE)
+simGrowth(
+  ny = 21,
+  zAtR = 1,
+  M = 0.23,
+  prGr = NULL,
+  grCoeffs = NULL,
+  prM2M = NULL,
+  m2mCoeffs = NULL,
+  sizes = seq(from = 25, to = 185, by = 1),
+  showPlot = TRUE,
+  normalize = FALSE
+)
 }
 \arguments{
 \item{ny}{- number of years to simulate}

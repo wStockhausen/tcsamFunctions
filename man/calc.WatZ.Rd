@@ -4,10 +4,15 @@
 \alias{calc.WatZ}
 \title{Convert Tanner crab size to weight using the current (2015) relationships.}
 \usage{
-calc.WatZ(z, sex, maturity, male = list(immature = list(a = 0.00027, b =
-  3.022134), mature = list(a = 0.00027, b = 3.022134), undetermined =
-  list(a = 0.00027, b = 3.022134)), female = list(immature = list(a =
-  0.000562, b = 2.816928), mature = list(a = 0.000441, b = 2.898686)))
+calc.WatZ(
+  z,
+  sex,
+  maturity,
+  male = list(immature = list(a = 0.00027, b = 3.022134), mature = list(a = 0.00027, b =
+    3.022134), undetermined = list(a = 0.00027, b = 3.022134)),
+  female = list(immature = list(a = 0.000562, b = 2.816928), mature = list(a = 0.000441,
+    b = 2.898686))
+)
 }
 \arguments{
 \item{z}{: vector of sizes (mm CW)}
