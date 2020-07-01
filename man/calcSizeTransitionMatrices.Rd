@@ -2,7 +2,7 @@
 % Please edit documentation in R/calcSizeTransitionMatrices.R
 \name{calcSizeTransitionMatrices}
 \alias{calcSizeTransitionMatrices}
-\title{Calculate size transition matrices for Tanner crab.}
+\title{Calculate size transition matrices for Tanner crab}
 \usage{
 calcSizeTransitionMatrices(
   coeffs = list(MALE = list(a = 0.42577, b = 0.971389, beta = 0.75, type =

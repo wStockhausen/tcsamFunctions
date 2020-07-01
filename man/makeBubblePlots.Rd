@@ -14,16 +14,47 @@ makeBubblePlots(
   z.lbl = z,
   fill = "sex",
   fill.lbl = fill,
-  by = "",
-  by.lbl = by,
   scaleBy = 1,
   normalize = FALSE,
   xlims = NULL,
   ylims = NULL,
-  colors = brewer.pal(11, "Spectral"),
+  colors = RColorBrewer::brewer.pal(11, "Spectral"),
   alpha = 0.5,
   showPlot = TRUE
 )
+}
+\arguments{
+\item{lst}{- list or matrix}
+
+\item{x}{- column name for x axis}
+
+\item{x.lbl}{- label for x axis}
+
+\item{y}{- column name for y axis}
+
+\item{y.lbl}{- label for y axis}
+
+\item{z}{- column name for bubble sizes}
+
+\item{z.lbl}{- label for sizes}
+
+\item{fill}{- column name for bubble fill colours}
+
+\item{fill.lbl}{- label for fills}
+
+\item{scaleBy}{- value to scale bubbles by}
+
+\item{normalize}{- flag (T/F) to normalize sums to 1}
+
+\item{xlims}{- x-axis limits (or NULL)}
+
+\item{ylims}{- y-axis limits (or NULL)}
+
+\item{colors}{- color palette to use (default is \code{RColorBrewer::brewer.pal(11,"Spectral")})}
+
+\item{alpha}{- transparency level}
+
+\item{showPlot}{- flag to print plot}
 }
 \description{
 Function to plot a matrix or list of matrices using a bubble plot.

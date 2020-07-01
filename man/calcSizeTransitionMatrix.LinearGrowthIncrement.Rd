@@ -3,7 +3,7 @@
 %   R/calcSizeTransitionMatrix.LinearGrowthIncrement.R
 \name{calcSizeTransitionMatrix.LinearGrowthIncrement}
 \alias{calcSizeTransitionMatrix.LinearGrowthIncrement}
-\title{Calculate a size transition matrix.}
+\title{Calculate a size transition matrix}
 \usage{
 calcSizeTransitionMatrix.LinearGrowthIncrement(
   a = 0.7,
@@ -14,13 +14,13 @@ calcSizeTransitionMatrix.LinearGrowthIncrement(
   sizes = seq(from = 27.5, to = 182.5, by = 5),
   showPlot = TRUE,
   log = FALSE,
-  colors = rainbow(1000)
+  colors = grDevices::rainbow(1000)
 )
 }
 \arguments{
-\item{a}{-}
+\item{a}{- "a" coefficient of linear growth increment}
 
-\item{b}{-}
+\item{b}{- "b" coefficient of linear growth increment}
 
 \item{beta}{- gamma distribution scale parameter}
 
@@ -28,13 +28,13 @@ calcSizeTransitionMatrix.LinearGrowthIncrement(
 
 \item{coeffs}{- list with coefficients a, b, beta, maxDZ}
 
+\item{sizes}{- size bins to include in matrix}
+
 \item{showPlot}{- flag (T/F) to plot matrix}
 
 \item{log}{- flag to plot ln-scale matrix (in conjunction w/ showPlot)}
 
 \item{colors}{- palette to plot matrix with}
-
-\item{bins}{- size bins to include in matrix}
 }
 \value{
 matrix

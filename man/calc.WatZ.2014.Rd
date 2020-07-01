@@ -2,7 +2,7 @@
 % Please edit documentation in R/calc.WatZ.2014.R
 \name{calc.WatZ.2014}
 \alias{calc.WatZ.2014}
-\title{Convert Tanner crab size to weight based on the 2014 assessment (Rugolo and Turnock).}
+\title{Convert Tanner crab size to weight based on the 2014 assessment (Rugolo and Turnock)}
 \usage{
 calc.WatZ.2014(
   z,

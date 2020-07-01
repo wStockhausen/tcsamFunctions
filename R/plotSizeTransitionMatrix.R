@@ -1,5 +1,5 @@
 #'
-#'@title Plot a growth transition matrix as an image.
+#'@title Plot a growth transition matrix as an image
 #'
 #'@description Function to plot a growth transition matrix as an image.
 #'
@@ -19,12 +19,12 @@
 #'
 plotSizeTransitionMatrix<-function(prGr,log=FALSE){
 
-    colors <- brewer.pal(11,"Spectral")
+    colors <- RColorBrewer::brewer.pal(11,"Spectral")
     
     mPrGr<-melt(prGr);
     if (log) {mPrGr$value=log(mPrGr$value);}
     
-    p<-ggplot(mPrGr,aes(from,to,z=value,fill=value)) +
+    p<-ggplot(mPrGr,aes(x=from,y=to,z=value,fill=value)) +
         labs(x="pre-molt size (mm CW)",y="post-molt size (mm CW)",fill="pr(to|from)") + 
         scale_x_continuous(expand = c(0, 0)) + 
         scale_y_continuous(expand = c(0, 0)) +

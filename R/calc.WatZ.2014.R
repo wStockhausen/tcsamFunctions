@@ -1,5 +1,5 @@
 #'
-#'@title Convert Tanner crab size to weight based on the 2014 assessment (Rugolo and Turnock).
+#'@title Convert Tanner crab size to weight based on the 2014 assessment (Rugolo and Turnock)
 #'
 #'@description Power-law functions for Tanner crab weight-at-size (g) by sex and maturity
 #'   based on the 2014 assessment (Rugolo and Turnock's parameters).

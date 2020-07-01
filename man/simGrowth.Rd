@@ -2,7 +2,7 @@
 % Please edit documentation in R/simGrowth.R
 \name{simGrowth}
 \alias{simGrowth}
-\title{Simulate individual growth trajectories based on a size transition matrix.}
+\title{Simulate individual growth trajectories based on a size transition matrix}
 \usage{
 simGrowth(
   ny = 21,

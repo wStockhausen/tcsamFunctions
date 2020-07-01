@@ -1,14 +1,14 @@
 #'
-#'@title Calculate a size transition matrix.
+#'@title Calculate a size transition matrix
 #'
 #'@description Function to calculate a size transition matrix
 #'
-#'@param a - 
-#'@param b - 
+#'@param a - "a" coefficient of linear growth increment
+#'@param b - "b" coefficient of linear growth increment
 #'@param beta - gamma distribution scale parameter
 #'@param maxDZ - max growth increment allowed (truncates potential growth)
 #'@param coeffs - list with coefficients a, b, beta, maxDZ 
-#'@param bins - size bins to include in matrix
+#'@param sizes - size bins to include in matrix
 #'@param showPlot - flag (T/F) to plot matrix
 #'@param log - flag to plot ln-scale matrix (in conjunction w/ showPlot)
 #'@param colors - palette to plot matrix with
@@ -17,7 +17,9 @@
 #'
 #'@details Approximates the gamma cdf using the pdf, as in old TCSAM.
 #'
-#'@export
+#' @importFrom grDevices rainbow
+#' 
+#' @export
 #'
 calcSizeTransitionMatrix.LinearGrowthIncrement<-function(a=0.70000,
                                                          b=0.883118,
@@ -27,7 +29,7 @@ calcSizeTransitionMatrix.LinearGrowthIncrement<-function(a=0.70000,
                                                          sizes=seq(from=27.5,to=182.5,by=5),
                                                          showPlot=TRUE,
                                                          log=FALSE,
-                                                         colors=rainbow(1000)){
+                                                         colors=grDevices::rainbow(1000)){
     if (!is.null(coeffs)){
         if (!is.null(coeffs$a))     a<-coeffs$a;
         if (!is.null(coeffs$b))     b<-coeffs$b;

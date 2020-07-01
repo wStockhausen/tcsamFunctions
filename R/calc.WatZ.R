@@ -1,5 +1,5 @@
 #'
-#'@title Convert Tanner crab size to weight using the current (2015) relationships.
+#'@title Convert Tanner crab size to weight using the current (2015) relationships
 #'
 #'@description Power-law functions for Tanner crab weight-at-size (g) by sex and maturity
 #'   based on 2015 NMFS survey.

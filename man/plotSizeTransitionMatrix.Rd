@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotSizeTransitionMatrix.R
 \name{plotSizeTransitionMatrix}
 \alias{plotSizeTransitionMatrix}
-\title{Plot a growth transition matrix as an image.}
+\title{Plot a growth transition matrix as an image}
 \usage{
 plotSizeTransitionMatrix(prGr, log = FALSE)
 }

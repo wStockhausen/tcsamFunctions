@@ -1,5 +1,5 @@
 #'
-#'@title Calculate the probability at crab size z for the molt to maturity, pr(mature|z).
+#'@title Calculate the probability at crab size z for the molt to maturity, pr(mature|z)
 #'
 #'@description Function to calculate the probability at crab size z for the 
 #'molt to maturity, pr(mature|z). Note that it is up to the user to define whether

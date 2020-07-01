@@ -1,5 +1,5 @@
 #'
-#'@title Calculate a double normal selectivity function.
+#'@title Calculate a double normal selectivity function
 #'
 #'@description Function to calculate (and optionally plot the components of) a double normal selectivity function.
 #'

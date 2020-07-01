@@ -2,7 +2,7 @@
 % Please edit documentation in R/selFcn.DoubleNormal.R
 \name{selFcn.DoubleNormal}
 \alias{selFcn.DoubleNormal}
-\title{Calculate a double normal selectivity function.}
+\title{Calculate a double normal selectivity function}
 \usage{
 selFcn.DoubleNormal(x, params, showPlot = FALSE)
 }

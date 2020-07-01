@@ -1,5 +1,5 @@
 #'
-#'@title Calculate size transition matrices for Tanner crab.
+#'@title Calculate size transition matrices for Tanner crab
 #'
 #'@description Function to calculate sex-specific size transition matrices for Tanner crab.
 #'

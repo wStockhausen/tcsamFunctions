@@ -1,5 +1,5 @@
 #' 
-#' @title Calculate a size transition matrix.
+#' @title Calculate a size transition matrix
 #' 
 #' @description Function to calculate a size transition matrix.
 #'
@@ -7,13 +7,15 @@
 #' @param sizes - vector of sizes at which to calculate the sie transition probabilities
 #' @param showPlot - flag (T/F) to plot the matrix
 #' @param log - flag to use ln-scale on plot
-#' @param colors - paleete to use to color the plot
+#' @param colors - palette to use to color the plot
 #' 
-#' @return 
+#' @return - NULL
 #' 
 #' @details If 
 #' * 'type'='LinearGrowthIncrement', calls \code{calcSizeTransitionMatrix.LinearGrowthIncrement}.
 #'
+#' @importFrom grDevices rainbow
+#' 
 #' @export
 #'
 calcSizeTransitionMatrix<-function(coeffs=list(type='LinearGrowthIncrement',
@@ -24,7 +26,7 @@ calcSizeTransitionMatrix<-function(coeffs=list(type='LinearGrowthIncrement',
                                    sizes=seq(from=25,to=185,by=1),
                                    showPlot=FALSE,
                                    log=FALSE,
-                                   colors=rainbow(1000)){
+                                   colors=grDevices::rainbow(1000)){
     if (coeffs$type=='LinearGrowthIncrement'){
         return(invisible(calcSizeTransitionMatrix.LinearGrowthIncrement(coeffs=coeffs,sizes=sizes,showPlot=showPlot,log=log,colors=colors)))
     }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/calcSizeTransitionMatrix.R
 \name{calcSizeTransitionMatrix}
 \alias{calcSizeTransitionMatrix}
-\title{Calculate a size transition matrix.}
+\title{Calculate a size transition matrix}
 \usage{
 calcSizeTransitionMatrix(
   coeffs = list(type = "LinearGrowthIncrement", a = 0.7, b = 0.883118, beta = 0.75,
@@ -10,7 +10,7 @@ calcSizeTransitionMatrix(
   sizes = seq(from = 25, to = 185, by = 1),
   showPlot = FALSE,
   log = FALSE,
-  colors = rainbow(1000)
+  colors = grDevices::rainbow(1000)
 )
 }
 \arguments{
@@ -22,10 +22,10 @@ calcSizeTransitionMatrix(
 
 \item{log}{- flag to use ln-scale on plot}
 
-\item{colors}{- paleete to use to color the plot}
+\item{colors}{- palette to use to color the plot}
 }
 \value{
-
+- NULL
 }
 \description{
 Function to calculate a size transition matrix.

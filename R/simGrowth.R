@@ -1,5 +1,5 @@
 #'
-#'@title Simulate individual growth trajectories based on a size transition matrix.
+#'@title Simulate individual growth trajectories based on a size transition matrix
 #'
 #'@description Function to simulate growth trajectories based on a size transition matrix.
 #'
@@ -36,7 +36,7 @@ simGrowth<-function(ny=21,zAtR=1,M=0.23,
     }
     if (is.null(prM2M)){
         if (!is.null(m2mCoeffs)){
-            prM2M<-calcPrMoltToMaturity(coeffs=m2mCoeffs,bins=bins);
+            prM2M<-calcPrMoltToMaturity(coeffs=m2mCoeffs,sizes=sizes);
         } else {
             prM2M<-calcPrMoltToMaturity(sizes=sizes);
         }

@@ -1,5 +1,5 @@
 #'
-#'@title Function to calculate Pr(mature|z) for new shell males.
+#'@title Function to calculate Pr(mature|z) for new shell males
 #'
 #'@description Logistic function for Pr(mature|size) for new shell males
 #'   based on Rugolo and Turnock's fitted logistic curve. Parameters are based on my fit to their curve.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/calcPrMoltToMaturity.R
 \name{calcPrMoltToMaturity}
 \alias{calcPrMoltToMaturity}
-\title{Calculate the probability at crab size z for the molt to maturity, pr(mature|z).}
+\title{Calculate the probability at crab size z for the molt to maturity, pr(mature|z)}
 \usage{
 calcPrMoltToMaturity(
   coeffs = list(type = "logistic", z50 = 130, slope = 0.1),
