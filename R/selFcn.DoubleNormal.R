@@ -76,3 +76,109 @@ selFcn.DoubleNormal<-function(x,
 
     return(sel);
 }
+
+#'
+#'@title Calculate a double normal selectivity function with "4a" parameterization
+#'
+#'@description Function to calculate (and optionally plot the components of) a double normal selectivity function 
+#'with "4a" parameterization.
+#'
+#'@param zBs - vector of sizes at which to compute values
+#'@param params - list or vector of parameters
+#'@param fsZ - max possible size on the "shelf"
+#'@param showPlot - flag (T/F) to plot components of function
+#'
+#'@details Should replicate TCSAM02 dblnormal4a selectivity function.
+#'
+#'@import ggplot2
+#'@import reshape2
+#'@import tibble
+#'@import wtsADMB
+#'
+#'@export
+#'
+selFcn.DoubleNormal4a<-function(zBs,
+                                params,
+                                fsZ,
+                                showPlot=TRUE) {
+    slp = 5.0;
+    ascMnZ = params[1];#--size at which ascending limb hits 1
+    ascWdZ = params[2];#--width of ascending limb
+    sclInc = params[3];#--scaled size at which descending limb departs from 1
+    dscWdZ = params[4];#--width of descending limb
+    dscMnZ = (fsZ-ascMnZ)*sclInc + ascMnZ;
+    ascN  = mfexp(-0.5*square((zBs-ascMnZ)/ascWdZ));
+    ascJ  = 1.0/(1.0+mfexp(slp*(zBs-(ascMnZ))));
+    dscN = mfexp(-0.5*square((zBs-dscMnZ)/dscWdZ));
+    dscJ = 1.0/(1.0+mfexp(-slp*(zBs-(dscMnZ))));
+    s = elem_prod(elem_prod(ascJ,ascN)+(1.0-ascJ), elem_prod(dscJ,dscN)+(1.0-dscJ));
+    
+    if (showPlot){
+        dfr  = tibble::tibble(zBs=zBs,ascN=ascN,ascJ=ascJ,dscN=dscN,dscJ=dscJ,s=s);
+        mdfr = reshape2::melt(dfr,id.vars="zBs",variable.name="variable",value.name="value");
+        p = ggplot2::ggplot(mdfr,mapping=ggplot2::aes(x=zBs,y=value,colour=variable));
+        p = p + ggplot2::geom_line();
+        p = p + ggplot2::geom_vline(xintercept=ascMnZ,linetype=1,colour="grey",size=2,alpha=0.2);
+        p = p + ggplot2::geom_vline(xintercept=dscMnZ,linetype=1,colour="grey",size=2,alpha=0.2);
+        print(p);
+    }
+    return(s);
+}
+# require(wtsADMB);
+# zBs = seq(27.5,182.5,5);
+# params = c(140,23.6046517434,0.237607333911,29.9999999390);
+# selFcn.DoubleNormal4a(zBs,params,182);
+
+#'
+#'@title Calculate a ascending normal selectivity function with "3" parameterization
+#'
+#'@description Function to calculate (and optionally plot the components of) an ascending normal selectivity function 
+#'with "3" parameterization.
+#'
+#'@param zBs - vector of sizes at which to compute values
+#'@param params - list or vector of parameters
+#'@param fsZ    - max possible size at which selectivity reaches 1
+#'@param showPlot - flag (T/F) to plot components of function
+#'
+#'@details Should replicate TCSAM02 ascnormal3 selectivity function.
+#'
+#'params are:\cr
+#'  1: delta size from max possible (params[4])\cr
+#'  2: ln-scale selectivity at size givens by params[3]\cr
+#'  3: size at selectivity is given by params[2]\cr
+#'  4: max possible size at which peak is reached
+#'
+#'@import ggplot2
+#'@import reshape2
+#'@import tibble
+#'@import wtsADMB
+#'
+#'@export
+#'
+selFcn.AscNormal3<-function(zBs,
+                            params,
+                            fsZ,
+                            showPlot=TRUE) {
+    slp = 5.0;
+    ascZ1     = fsZ-params[1];#--size at which ascending limb hits 1
+    ascSref   = params[2];    #--selectivity at ascZref
+    ascZref   = params[3];    #--size at which selectivity reaches ascSref
+    ascN      = mfexp(log(ascSref)*square((zBs-ascZ1)/(ascZref-ascZ1)));
+    ascJ      = 1.0/(1.0+mfexp(slp*(zBs-(ascZ1))));
+    s = elem_prod(ascJ,ascN)+(1.0-ascJ);
+    
+    if (showPlot){
+        dfr  = tibble::tibble(zBs=zBs,ascN=ascN,ascJ=ascJ,s=s);
+        mdfr = reshape2::melt(dfr,id.vars="zBs",variable.name="variable",value.name="value");
+        p = ggplot2::ggplot(mdfr,mapping=ggplot2::aes(x=zBs,y=value,colour=variable));
+        p = p + ggplot2::geom_line();
+        p = p + ggplot2::geom_vline(xintercept=ascZ1,linetype=2,colour="grey",size=2,alpha=0.2);
+        p = p + ggplot2::geom_vline(xintercept=ascZref,linetype=2,colour="grey",size=2,alpha=0.2);
+        p = p + ggplot2::geom_hline(yintercept=ascSref,linetype=2,colour="grey",size=2,alpha=0.2);
+        print(p);
+    }
+    return(s);
+}
+# zBs = seq(27.5,182.5,5);
+# params = c(80.4968168760,exp(-1.67535227638),32);
+# selFcn.AscNormal3(zBs,params,132);
