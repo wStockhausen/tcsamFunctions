@@ -93,7 +93,6 @@ selFcn.DoubleNormal<-function(x,
 #'@import ggplot2
 #'@import reshape2
 #'@import tibble
-#'@import wtsADMB
 #'
 #'@export
 #'
@@ -151,7 +150,6 @@ selFcn.DoubleNormal4a<-function(zBs,
 #'@import ggplot2
 #'@import reshape2
 #'@import tibble
-#'@import wtsADMB
 #'
 #'@export
 #'

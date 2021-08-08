@@ -1,3 +1,19 @@
+################################################################################
+#' 
+#' @title Retrieve a list of growth parameters
+#' 
+#' @description Function to retrieve a list of growth parameters.
+#' 
+#' @return list with elements 'assessment', 'tmb', and 'DonaldsonEtAl1981', each of which 
+#' is a tibble with sex-specific growth parameters from the assessment model, the TMB
+#' analysis, and the Donaldson et al., 1981 study.
+#' 
+#' @details Port of TCSAM02 size transition calculations from ADMB to R
+#' 
+#' @importFrom tibble tibble
+#' 
+#' @export
+#' 
 getGrowthParams<-function(){
     #--from assesssment model
     assessment=rbind(tibble::tibble(sex="male",  pGrA=32.4293064532,pGrB=164.709991529,zGrA=25,zGrB=125),
@@ -16,15 +32,49 @@ getGrowthParams<-function(){
     return(list(assessment=assessment,tmb=tmb,DonaldsonEtAl1981=DonaldsonEtAl1981));
 }
 
-getInstarSizes.DonaldsonEtAl1981<-function(){
-    
-}
+# getInstarSizes.DonaldsonEtAl1981<-function(){
+#     
+# }
+
+################################################################################
+#' 
+#' @title Calculate mean growth as in TCSAM02
+#' 
+#' @description Function to calculate mean growth as in TCSAM02.
+#' 
+#' @param zBs - size bins
+#' @param params - list of growth parameters
+#' 
+#' @return vector
+#' 
+#' @details Port of TCSAM02 size transition calculations from ADMB to R
+#' 
+#' @importFrom tibble tibble
+#' 
+#' @export
+#' 
 calcMeanGrowth.tcsam02<-function(zBs,
                                  params){
     mnZs = params$grA*exp(log(params$grB/params$grA)/log(params$zGrB/params$zGrA)*log(zBs/params$zGrA));
     return(tibble::tibble(sex=params$sex,premolt=zBs,postmolt=mnZs));
 }
 
+################################################################################
+#' 
+#' @title Calculate mean growth as in Donaldson et al., 1981
+#' 
+#' @description Function to calculate mean growth as in Donaldson et al., 1981.
+#' 
+#' @param zBs - size bins
+#' 
+#' @return vector
+#' 
+#' @details See Donaldson et al., 1981.
+#' 
+#' @importFrom tibble tibble
+#' 
+#' @export
+#' 
 calcMeanGrowth.DonaldsonEtAl1981<-function(zBs){
     params<-getGrowthParams()$DonaldsonEtAl1981;
     dfr<-NULL;
@@ -38,7 +88,22 @@ calcMeanGrowth.DonaldsonEtAl1981<-function(zBs){
     }
     return(dfr);
 }
-
+################################################################################
+#' 
+#' @title Calculate the size transition matrix as in TCSAM02
+#' 
+#' @description Function to calculate the size transition matrix as in TCSAM02.
+#' 
+#' @param zBs - size bins
+#' @param delZ - size bin width (mm CW)
+#' @param params - list of growth parameters
+#' 
+#' @return matrix
+#' 
+#' @details Port of TCSAM02 size transition calculations from ADMB to R
+#' 
+#' @export
+#' 
 calcSizeTransitionMtrix.tcsam02<-function(zBs,
                                           delZ,
                                           params){
@@ -56,17 +121,19 @@ calcSizeTransitionMtrix.tcsam02<-function(zBs,
         cprs = vector(0,length=(nZBs-z+1));
         prs = vector(0,length=(nZBs-z+1));
         sclIs = (zCs[(z+1):(nZBs+1)]-zBs[z])*invBeta;#scaled increments at size bin cut points
-        cprs(z) = pgamma(sclIs(z+1),alIs(z));
+        cprs[z] = pgamma(sclIs(z+1),alIs(z));
         prs[z]  = cprs[z];
-        for (int zp=z+1;zp<=nZBs;zp++){
-            cprs(zp) = cumd_gamma(sclIs(zp+1),alIs(z));
-            prs(zp)  = cprs(zp)-cprs(zp-1);//cumulative pr from zCs(zp) to zCs(zp+1)
+        for (zp in (z+1):nZBs){
+            cprs[zp] = cumd_gamma(sclIs(zp+1),alIs(z));
+            prs[zp]  = cprs[zp]-cprs[zp-1];#--cumulative pr from zCs(zp) to zCs(zp+1)
         }
-        prs(nZBs)   += 1.0 - cprs(nZBs);//treat final size bin as accumulator
-        if (prs.size()>maxZBEx) prs(z+maxZBEx,nZBs) = 0.0;//limit growth range
-        prs = prs/sum(prs);//normalize to sum to 1
-        if (debug) cout<<prs<<endl;
-        prGr_zz(z)(z,nZBs) = prs;
-    }
+        prs[nZBs] = prs[nZBs] + 1.0 - cprs(nZBs);         #--treat final size bin as accumulator
+        if (length(prs)>maxZBEx) prs[(z+maxZBEx):nZBs] = 0.0;#--limit growth range
+        prs = prs/sum(prs);#--normalize to sum to 1
+        if (debug) cat(prs,"\n");
+        prGr_zz[z,z:nZBs] = prs;
+    }#--z
     prGr_zz[nZBs,nZBs] = 1;#no growth from accumulator bin
+    return(prGr_zz);
 }
+
