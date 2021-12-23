@@ -9,7 +9,7 @@ selFcn.AscNormal3(zBs, params, fsZ, showPlot = TRUE)
 \arguments{
 \item{zBs}{- vector of sizes at which to compute values}
 
-\item{params}{- list or vector of parameters}
+\item{params}{- vector of parameters}
 
 \item{fsZ}{- max possible size at which selectivity reaches 1}
 

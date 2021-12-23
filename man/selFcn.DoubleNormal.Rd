@@ -4,18 +4,30 @@
 \alias{selFcn.DoubleNormal}
 \title{Calculate a double normal selectivity function}
 \usage{
-selFcn.DoubleNormal(x, params, showPlot = FALSE)
+selFcn.DoubleNormal(x, params, showPlot = FALSE, test = FALSE)
 }
 \arguments{
 \item{x}{- age/size bins at which to compute values}
 
-\item{params}{- list or vector of parameters}
+\item{params}{- vector of parameters (see \link{details})}
 
 \item{showPlot}{- flag (T/F) to plot components of function}
+
+\item{test}{- flag (T/F) to output list with detailed info (T) rather than just vector of sel function values (F)}
 }
 \description{
 Function to calculate (and optionally plot the components of) a double normal selectivity function.
 }
 \details{
 TBD!!
+
+params are:
+\itemize{
+ \item{1: location of ascending peak}
+ \item{2: logistic scale width of plateau}
+ \item{3: ascending slope  (NOT log scale; i.e. = exp(p[3]) if p[3] from SS)}
+ \item{3: descending slope (NOT log scale; i.e. = exp(p[4]) if p[4] from SS)}
+ \item{5: logistic scale value in initial bin; i.e. initial = 1./(1.+exp(-params[5]));}
+ \item{6: logistic scale value in final bin;   i.e. final   = 1./(1.+exp(-params[6]));}
+}
 }

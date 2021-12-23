@@ -4,10 +4,21 @@
 #'@description Function to calculate (and optionally plot the components of) a double normal selectivity function.
 #'
 #'@param x - age/size bins at which to compute values
-#'@param params - list or vector of parameters
+#'@param params - vector of parameters (see \link{details})
 #'@param showPlot - flag (T/F) to plot components of function
+#'@param test - flag (T/F) to output list with detailed info (T) rather than just vector of sel function values (F)
 #'
 #'@details TBD!!
+#'
+#'params are:
+#' \itemize{
+#'  \item{1: location of ascending peak}
+#'  \item{2: logistic scale width of plateau}
+#'  \item{3: ascending slope  (NOT log scale; i.e. = exp(p[3]) if p[3] from SS)}
+#'  \item{3: descending slope (NOT log scale; i.e. = exp(p[4]) if p[4] from SS)}
+#'  \item{5: logistic scale value in initial bin; i.e. initial = 1./(1.+exp(-params[5]));}
+#'  \item{6: logistic scale value in final bin;   i.e. final   = 1./(1.+exp(-params[6]));}
+#' }
 #'
 #'@import graphics
 #'
@@ -15,7 +26,8 @@
 #'
 selFcn.DoubleNormal<-function(x,
                               params,
-                              showPlot=FALSE) {
+                              showPlot=FALSE,
+                              test=FALSE) {
     #in ADMB code,
     #   x was len_bins_m (midpoints of size/age bins)
     #   binwidth was binwidth(nlength/2) (now assuming constant binwidth)
@@ -33,8 +45,9 @@ selFcn.DoubleNormal<-function(x,
     join1<-0*x;#join1
     join2<-0*x;#join2
 
-    peak2<-params[1]+binwidth+ (0.99*maxz-params[1]-binwidth)/(1.+exp(-params[2]));
-    upselex<-params[3];   #was exp(params(3))
+    peak1    <-params[1];
+    peak2    <-params[1]+binwidth+ (0.99*maxz-params[1]-binwidth)/(1.+exp(-params[2]));
+    upselex  <-params[3]; #was exp(params(3))
     downselex<-params[4]; #was exp(params(4))
     if(params[5]>-999) {
         point1<-1./(1.+exp(-params[5]));
@@ -45,7 +58,7 @@ selFcn.DoubleNormal<-function(x,
         t2min<-exp(-((maxz-peak2)^2)/downselex);  #unscaled  fcn at last bin
     }
     for (j in 1:length(x)) {
-        t1<-x[j]-params[1];
+        t1<-x[j]-peak1;
         t2<-x[j]-peak2;
         join1[j]<-1./(1.+exp(-(20./(1.+abs(t1)))*t1));
         join2[j]<-1./(1.+exp(-(20./(1.+abs(t2)))*t2));
@@ -73,9 +86,47 @@ selFcn.DoubleNormal<-function(x,
         points(x,sel,col="red");
         lines(x,sel,col="red");
     }
-
-    return(sel);
+    
+    if (!test) return(sel);
+    
+    #--output tibble
+    tbl=tibble::tibble(x=x,sel=sel,
+                       asc=asc,asc_scl=asc_scl,join1=join1,
+                       dsc=dsc,dsc_scl=dsc_scl,join2=join2);
+    return(list(params=params,
+                binwidth=binwidth,minz=minz,maxz=maxz,
+                peak1=peak1,peak2=peak2,
+                upselex=upselex,downselex=downselex,
+                point1=point1,t1min=t1min,
+                point2=point2,t2min=t2min,
+                tbl=tbl));
 }
+# if (FALSE){
+#     #--test the above using Mike Byerly's parameters
+#     x = 20:80;
+#     params = c(54.0494, 15, exp(4.00043), exp(-15), -15, 15)
+#     lst = selFcn.DoubleNormal(x,params,showPlot=TRUE,test=TRUE);
+#     tbl = lst$tbl;
+#     require(ggplot2);
+#     #--unscaled and scaled ascending components and join
+#     ggplot(tbl,aes(x=x))+
+#         geom_line(aes(y=asc),    colour="red")   + geom_point(aes(y=asc),colour="red") +
+#         geom_line(aes(y=asc_scl),colour="blue")  + geom_point(aes(y=asc_scl),colour="blue") +
+#         geom_line(aes(y=join1),  colour="green") + geom_point(aes(y=join1),colour="green");
+#     #--unscaled and scaled descending components and join
+#     ggplot(tbl,aes(x=x))+
+#         geom_line(aes(y=dsc),    colour="red")   + geom_point(aes(y=dsc),colour="red") +
+#         geom_line(aes(y=dsc_scl),colour="blue")  + geom_point(aes(y=dsc_scl),colour="blue") +
+#         geom_line(aes(y=join2),  colour="green") + geom_point(aes(y=join2),colour="green");
+#     #--ascending, descending components and final selectivity curve
+#     ggplot(tbl,aes(x=x))+
+#         geom_line(aes(y=asc_scl),colour="red")   + geom_point(aes(y=asc_scl),colour="red") +
+#         geom_line(aes(y=dsc_scl),colour="blue")  + geom_point(aes(y=dsc_scl),colour="blue") +
+#         geom_line(aes(y=sel),    colour="green") + geom_point(aes(y=sel),    colour="green");
+#     #--resulting selectivity curve
+#     ggplot(tbl,aes(x=x))+
+#         geom_line(aes(y=sel),    colour="green") + geom_point(aes(y=sel),    colour="green");
+# }
 
 #'
 #'@title Calculate a double normal selectivity function with "4a" parameterization
@@ -84,11 +135,18 @@ selFcn.DoubleNormal<-function(x,
 #'with "4a" parameterization.
 #'
 #'@param zBs - vector of sizes at which to compute values
-#'@param params - list or vector of parameters
+#'@param params - vector of parameters
 #'@param fsZ - max possible size on the "shelf"
 #'@param showPlot - flag (T/F) to plot components of function
 #'
 #'@details Should replicate TCSAM02 dblnormal4a selectivity function.
+#'
+#'\itemize{
+#' \item{params[1]: size at which ascending limb hits 1}
+#' \item{params[2]: width of ascending limb}
+#' \item{params[3]: scaled size at which descending limb departs from 1}
+#' \item{params[4]: width of descending limb}
+#'}
 #'
 #'@import ggplot2
 #'@import reshape2
@@ -135,7 +193,7 @@ selFcn.DoubleNormal4a<-function(zBs,
 #'with "3" parameterization.
 #'
 #'@param zBs - vector of sizes at which to compute values
-#'@param params - list or vector of parameters
+#'@param params - vector of parameters
 #'@param fsZ    - max possible size at which selectivity reaches 1
 #'@param showPlot - flag (T/F) to plot components of function
 #'
