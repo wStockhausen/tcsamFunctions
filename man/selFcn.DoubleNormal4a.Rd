@@ -7,25 +7,33 @@
 selFcn.DoubleNormal4a(zBs, params, fsZ, showPlot = TRUE)
 }
 \arguments{
-\item{zBs}{- vector of sizes at which to compute values}
+\item{zBs}{\itemize{
+\item vector of sizes at which to compute values
+}}
 
-\item{params}{- vector of parameters}
+\item{params}{\itemize{
+\item vector of parameters
+}}
 
-\item{fsZ}{- max possible size on the "shelf"}
+\item{fsZ}{\itemize{
+\item max possible size on the "shelf"
+}}
 
-\item{showPlot}{- flag (T/F) to plot components of function}
+\item{showPlot}{\itemize{
+\item flag (T/F) to plot components of function
+}}
 }
 \description{
-Function to calculate (and optionally plot the components of) a double normal selectivity function 
+Function to calculate (and optionally plot the components of) a double normal selectivity function
 with "4a" parameterization.
 }
 \details{
 Should replicate TCSAM02 dblnormal4a selectivity function.
 
 \itemize{
-\item{params[1]: size at which ascending limb hits 1}
-\item{params[2]: width of ascending limb}
-\item{params[3]: scaled size at which descending limb departs from 1}
-\item{params[4]: width of descending limb}
+\item{params\link{1}: size at which ascending limb hits 1}
+\item{params\link{2}: width of ascending limb}
+\item{params\link{3}: scaled size at which descending limb departs from 1}
+\item{params\link{4}: width of descending limb}
 }
 }

@@ -7,7 +7,9 @@
 calcMeanGrowth.DonaldsonEtAl1981(zBs)
 }
 \arguments{
-\item{zBs}{- size bins}
+\item{zBs}{\itemize{
+\item size bins
+}}
 }
 \value{
 vector

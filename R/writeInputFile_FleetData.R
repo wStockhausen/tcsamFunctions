@@ -7,26 +7,26 @@
 #' @param fleet - TCSAM fleet name
 #' @param type - fleet type ('FISHERY' or 'SURVEY')
 #' @param closed - vector of years when fishery was closed, if fleet is a fishery
-#' @param lstRC - list with retained catch information (see @details)
-#' @param lstTC - list with total catch information (see @details)
-#' @param lstDC - list with discard catch information (see @details)
-#' @param lstIC - list with index catch information (see @details)
+#' @param lstRC - list with retained catch information (see [details])
+#' @param lstTC - list with total catch information (see [details])
+#' @param lstDC - list with discard catch information (see [details])
+#' @param lstIC - list with index catch information (see [details])
 #' @param lstEff - list with effort data information
 #'
 #' @return Invisibly returns the connection to facilitate piping.
 #'
-#' @details
+#' @details 
 #' 
 #' The input lists \code{lstRC}, \code{lstTC}, \code{lstDC}, and \code{lstIC}
 #' must have the following structure, if not NULL:
 #' \itemize{
-#'   \item{lstAbd - NULL, or the \code{lstAbd} input to \link{writeTCSAM02_CatchData} (see \link{inputList_AggregateCatchData})}
-#'   \item{lstBio - NULL, or the \code{lstAbd} input to \link{writeTCSAM02_CatchData} (see \link{inputList_AggregateCatchData})}
-#'   \item{lstZCs - NULL, or the \code{lstAbd} input to \link{writeTCSAM02_CatchData} (see \link{inputList_SizeCompsData})}
+#'   \item{lstAbd - NULL, or the \code{lstAbd} input to [writeTCSAM02_CatchData()] (see [inputList_AggregateCatchData()])}
+#'   \item{lstBio - NULL, or the \code{lstAbd} input to[ writeTCSAM02_CatchData()] (see [inputList_AggregateCatchData()])}
+#'   \item{lstZCs - NULL, or the \code{lstAbd} input to [writeTCSAM02_CatchData()] (see [inputList_SizeCompsData()])}
 #' }
 #' 
-#' \code{lstEff} contains input values passed to \link{writeTCSAM02_EffortData} and must have 
-#' the following structure (\link{inputList_EffortData}), if not NULL:
+#' \code{lstEff} contains input values passed to [writeTCSAM02_EffortData()] and must have 
+#' the following structure ([inputList_EffortData()]), if not NULL:
 #' \itemize{
 #'   \item{dfr - dataframe with columns 'year' and 'effort'}
 #'   \item{avgInterval - averaging interval given in TCSAM02 time block format}
@@ -36,7 +36,7 @@
 #'   \item{unitsOut - units for output effort}
 #' }
 #' 
-#' @seealso \link{inputList_AggregateCatchData}, \link{inputList_SizeCompsData}), \link{inputList_EffortData}.
+#' @seealso [inputList_AggregateCatchData()], [inputList_SizeCompsData()], [inputList_EffortData()].
 #' 
 #' @export
 #'

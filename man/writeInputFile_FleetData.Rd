@@ -17,23 +17,41 @@ writeInputFile_FleetData(
 )
 }
 \arguments{
-\item{con}{- connection to write to}
+\item{con}{\itemize{
+\item connection to write to
+}}
 
-\item{fleet}{- TCSAM fleet name}
+\item{fleet}{\itemize{
+\item TCSAM fleet name
+}}
 
-\item{type}{- fleet type ('FISHERY' or 'SURVEY')}
+\item{type}{\itemize{
+\item fleet type ('FISHERY' or 'SURVEY')
+}}
 
-\item{closed}{- vector of years when fishery was closed, if fleet is a fishery}
+\item{closed}{\itemize{
+\item vector of years when fishery was closed, if fleet is a fishery
+}}
 
-\item{lstRC}{- list with retained catch information (see @details)}
+\item{lstRC}{\itemize{
+\item list with retained catch information (see \link{details})
+}}
 
-\item{lstTC}{- list with total catch information (see @details)}
+\item{lstTC}{\itemize{
+\item list with total catch information (see \link{details})
+}}
 
-\item{lstDC}{- list with discard catch information (see @details)}
+\item{lstDC}{\itemize{
+\item list with discard catch information (see \link{details})
+}}
 
-\item{lstIC}{- list with index catch information (see @details)}
+\item{lstIC}{\itemize{
+\item list with index catch information (see \link{details})
+}}
 
-\item{lstEff}{- list with effort data information}
+\item{lstEff}{\itemize{
+\item list with effort data information
+}}
 }
 \value{
 Invisibly returns the connection to facilitate piping.
@@ -45,22 +63,22 @@ Function to write fleet data to a TCSAM input file.
 The input lists \code{lstRC}, \code{lstTC}, \code{lstDC}, and \code{lstIC}
 must have the following structure, if not NULL:
 \itemize{
-  \item{lstAbd - NULL, or the \code{lstAbd} input to \link{writeTCSAM02_CatchData} (see \link{inputList_AggregateCatchData})}
-  \item{lstBio - NULL, or the \code{lstAbd} input to \link{writeTCSAM02_CatchData} (see \link{inputList_AggregateCatchData})}
-  \item{lstZCs - NULL, or the \code{lstAbd} input to \link{writeTCSAM02_CatchData} (see \link{inputList_SizeCompsData})}
+\item{lstAbd - NULL, or the \code{lstAbd} input to \code{\link[=writeTCSAM02_CatchData]{writeTCSAM02_CatchData()}} (see \code{\link[=inputList_AggregateCatchData]{inputList_AggregateCatchData()}})}
+\item{lstBio - NULL, or the \code{lstAbd} input to\link[=writeTCSAM02_CatchData]{ writeTCSAM02_CatchData()} (see \code{\link[=inputList_AggregateCatchData]{inputList_AggregateCatchData()}})}
+\item{lstZCs - NULL, or the \code{lstAbd} input to \code{\link[=writeTCSAM02_CatchData]{writeTCSAM02_CatchData()}} (see \code{\link[=inputList_SizeCompsData]{inputList_SizeCompsData()}})}
 }
 
-\code{lstEff} contains input values passed to \link{writeTCSAM02_EffortData} and must have 
-the following structure (\link{inputList_EffortData}), if not NULL:
+\code{lstEff} contains input values passed to \code{\link[=writeTCSAM02_EffortData]{writeTCSAM02_EffortData()}} and must have
+the following structure (\code{\link[=inputList_EffortData]{inputList_EffortData()}}), if not NULL:
 \itemize{
-  \item{dfr - dataframe with columns 'year' and 'effort'}
-  \item{avgInterval - averaging interval given in TCSAM02 time block format}
-  \item{likeType - likelihood type}
-  \item{likeWgt - likelihood weight}
-  \item{unitsIn - units for input effort}
-  \item{unitsOut - units for output effort}
+\item{dfr - dataframe with columns 'year' and 'effort'}
+\item{avgInterval - averaging interval given in TCSAM02 time block format}
+\item{likeType - likelihood type}
+\item{likeWgt - likelihood weight}
+\item{unitsIn - units for input effort}
+\item{unitsOut - units for output effort}
 }
 }
 \seealso{
-\link{inputList_AggregateCatchData}, \link{inputList_SizeCompsData}), \link{inputList_EffortData}.
+\code{\link[=inputList_AggregateCatchData]{inputList_AggregateCatchData()}}, \code{\link[=inputList_SizeCompsData]{inputList_SizeCompsData()}}, \code{\link[=inputList_EffortData]{inputList_EffortData()}}.
 }

@@ -7,9 +7,13 @@
 getScaleForBiomass(unitsIn, unitsOut)
 }
 \arguments{
-\item{unitsIn}{- units for input data}
+\item{unitsIn}{\itemize{
+\item units for input data
+}}
 
-\item{unitsOut}{- units for output data}
+\item{unitsOut}{\itemize{
+\item units for output data
+}}
 }
 \value{
 multiplicative scale: output = scale * input.

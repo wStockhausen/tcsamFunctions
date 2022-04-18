@@ -7,9 +7,13 @@
 elem_prod(x, y)
 }
 \arguments{
-\item{x}{- vector}
+\item{x}{\itemize{
+\item vector
+}}
 
-\item{y}{- vector}
+\item{y}{\itemize{
+\item vector
+}}
 }
 \value{
 elem_prod(x,y)

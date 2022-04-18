@@ -7,24 +7,32 @@
 selFcn.AscNormal3(zBs, params, fsZ, showPlot = TRUE)
 }
 \arguments{
-\item{zBs}{- vector of sizes at which to compute values}
+\item{zBs}{\itemize{
+\item vector of sizes at which to compute values
+}}
 
-\item{params}{- vector of parameters}
+\item{params}{\itemize{
+\item vector of parameters
+}}
 
-\item{fsZ}{- max possible size at which selectivity reaches 1}
+\item{fsZ}{\itemize{
+\item max possible size at which selectivity reaches 1
+}}
 
-\item{showPlot}{- flag (T/F) to plot components of function}
+\item{showPlot}{\itemize{
+\item flag (T/F) to plot components of function
+}}
 }
 \description{
-Function to calculate (and optionally plot the components of) an ascending normal selectivity function 
+Function to calculate (and optionally plot the components of) an ascending normal selectivity function
 with "3" parameterization.
 }
 \details{
 Should replicate TCSAM02 ascnormal3 selectivity function.
 
 params are:\cr
- 1: delta size from max possible (params[4])\cr
- 2: ln-scale selectivity at size givens by params[3]\cr
- 3: size at selectivity is given by params[2]\cr
- 4: max possible size at which peak is reached
+1: delta size from max possible (params\link{4})\cr
+2: ln-scale selectivity at size givens by params\link{3}\cr
+3: size at selectivity is given by params\link{2}\cr
+4: max possible size at which peak is reached
 }

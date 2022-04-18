@@ -7,11 +7,17 @@
 calcSizeTransitionMtrix.tcsam02(zBs, delZ, params)
 }
 \arguments{
-\item{zBs}{- size bins}
+\item{zBs}{\itemize{
+\item size bins
+}}
 
-\item{delZ}{- size bin width (mm CW)}
+\item{delZ}{\itemize{
+\item size bin width (mm CW)
+}}
 
-\item{params}{- list of growth parameters}
+\item{params}{\itemize{
+\item list of growth parameters
+}}
 }
 \value{
 matrix

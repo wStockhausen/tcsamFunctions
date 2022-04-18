@@ -24,37 +24,69 @@ makeBubblePlots(
 )
 }
 \arguments{
-\item{lst}{- list or matrix}
+\item{lst}{\itemize{
+\item list or matrix
+}}
 
-\item{x}{- column name for x axis}
+\item{x}{\itemize{
+\item column name for x axis
+}}
 
-\item{x.lbl}{- label for x axis}
+\item{x.lbl}{\itemize{
+\item label for x axis
+}}
 
-\item{y}{- column name for y axis}
+\item{y}{\itemize{
+\item column name for y axis
+}}
 
-\item{y.lbl}{- label for y axis}
+\item{y.lbl}{\itemize{
+\item label for y axis
+}}
 
-\item{z}{- column name for bubble sizes}
+\item{z}{\itemize{
+\item column name for bubble sizes
+}}
 
-\item{z.lbl}{- label for sizes}
+\item{z.lbl}{\itemize{
+\item label for sizes
+}}
 
-\item{fill}{- column name for bubble fill colours}
+\item{fill}{\itemize{
+\item column name for bubble fill colours
+}}
 
-\item{fill.lbl}{- label for fills}
+\item{fill.lbl}{\itemize{
+\item label for fills
+}}
 
-\item{scaleBy}{- value to scale bubbles by}
+\item{scaleBy}{\itemize{
+\item value to scale bubbles by
+}}
 
-\item{normalize}{- flag (T/F) to normalize sums to 1}
+\item{normalize}{\itemize{
+\item flag (T/F) to normalize sums to 1
+}}
 
-\item{xlims}{- x-axis limits (or NULL)}
+\item{xlims}{\itemize{
+\item x-axis limits (or NULL)
+}}
 
-\item{ylims}{- y-axis limits (or NULL)}
+\item{ylims}{\itemize{
+\item y-axis limits (or NULL)
+}}
 
-\item{colors}{- color palette to use (default is \code{RColorBrewer::brewer.pal(11,"Spectral")})}
+\item{colors}{\itemize{
+\item color palette to use (default is \code{RColorBrewer::brewer.pal(11,"Spectral")})
+}}
 
-\item{alpha}{- transparency level}
+\item{alpha}{\itemize{
+\item transparency level
+}}
 
-\item{showPlot}{- flag to print plot}
+\item{showPlot}{\itemize{
+\item flag to print plot
+}}
 }
 \description{
 Function to plot a matrix or list of matrices using a bubble plot.

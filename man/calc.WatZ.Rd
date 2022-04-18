@@ -30,7 +30,7 @@ a vector of weights in g corresponding to the input sizes, sexes, and maturity s
 }
 \description{
 Power-law functions for Tanner crab weight-at-size (g) by sex and maturity
-  based on 2015 NMFS survey.
+based on 2015 NMFS survey.
 }
 \details{
 'male' and 'female' are lists with named elements 'a' and 'b', whose values

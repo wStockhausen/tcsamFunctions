@@ -7,7 +7,9 @@
 mfexp(x)
 }
 \arguments{
-\item{x}{- vector}
+\item{x}{\itemize{
+\item vector
+}}
 }
 \value{
 exp(x)

@@ -7,7 +7,7 @@
 getGrowthParams()
 }
 \value{
-list with elements 'assessment', 'tmb', and 'DonaldsonEtAl1981', each of which 
+list with elements 'assessment', 'tmb', and 'DonaldsonEtAl1981', each of which
 is a tibble with sex-specific growth parameters from the assessment model, the TMB
 analysis, and the Donaldson et al., 1981 study.
 }

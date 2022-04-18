@@ -14,17 +14,29 @@ inputList_EffortData(
 )
 }
 \arguments{
-\item{dfr}{- effort data dataframe}
+\item{dfr}{\itemize{
+\item effort data dataframe
+}}
 
-\item{avgInterval}{- averaging interval (e.g., "[1992:-1]")}
+\item{avgInterval}{\itemize{
+\item averaging interval (e.g., "\link{1992:-1}")
+}}
 
-\item{likeType}{- likelihood type ("NORM2","NORMAL",or "LOGNORMAL")}
+\item{likeType}{\itemize{
+\item likelihood type ("NORM2","NORMAL",or "LOGNORMAL")
+}}
 
-\item{likeWgt}{- likelihood weight (multiplier)}
+\item{likeWgt}{\itemize{
+\item likelihood weight (multiplier)
+}}
 
-\item{unitsIn}{- input effort units ("ONES","MILLIONS")}
+\item{unitsIn}{\itemize{
+\item input effort units ("ONES","MILLIONS")
+}}
 
-\item{unitsOut}{- output effort units ("ONES","MILLIONS")}
+\item{unitsOut}{\itemize{
+\item output effort units ("ONES","MILLIONS")
+}}
 }
 \value{
 a list (see Details).
@@ -37,17 +49,17 @@ See below:
 
 The input dataframe \code{dfr} should have the following column names
 \itemize{
-  \item{year}
-  \item{effort}
+\item{year}
+\item{effort}
 }
 
 The output list has elements:
 \itemize{
-  \item{dfr - dataframe with columns 'year' and 'effort'}
-  \item{avgInterval - averaging interval given in TCSAM02 time block format}
-  \item{likeType - likelihood type}
-  \item{likeWgt - likelihood weight}
-  \item{unitsIn - units for input effort}
-  \item{unitsOut - units for output effort}
+\item{dfr - dataframe with columns 'year' and 'effort'}
+\item{avgInterval - averaging interval given in TCSAM02 time block format}
+\item{likeType - likelihood type}
+\item{likeWgt - likelihood weight}
+\item{unitsIn - units for input effort}
+\item{unitsOut - units for output effort}
 }
 }

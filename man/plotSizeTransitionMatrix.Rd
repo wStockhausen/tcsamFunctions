@@ -7,9 +7,13 @@
 plotSizeTransitionMatrix(prGr, log = FALSE)
 }
 \arguments{
-\item{prGr}{- growth transition matrix}
+\item{prGr}{\itemize{
+\item growth transition matrix
+}}
 
-\item{log}{- flag to plot ln-scale values}
+\item{log}{\itemize{
+\item flag to plot ln-scale values
+}}
 }
 \value{
 a ggplot2 object

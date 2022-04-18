@@ -6,7 +6,7 @@
 #' @param con - connection to use (default=stdout)
 #' @param dfr - effort data dataframe to write to connection
 #' @param closed - vector of closure years (or NULL)
-#' @param avgInterval - averaging interval (e.g., "[1992:-1]")
+#' @param avgInterval - averaging interval (e.g., "\[1992:-1\]")
 #' @param likeType - likelihood type ("NORM2","NORMAL",or "LOGNORMAL")
 #' @param likeWgt - likelihood weight (multiplier)
 #' @param unitsIn - input effort units ("ONES","MILLIONS")

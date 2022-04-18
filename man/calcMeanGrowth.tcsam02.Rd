@@ -7,9 +7,13 @@
 calcMeanGrowth.tcsam02(zBs, params)
 }
 \arguments{
-\item{zBs}{- size bins}
+\item{zBs}{\itemize{
+\item size bins
+}}
 
-\item{params}{- list of growth parameters}
+\item{params}{\itemize{
+\item list of growth parameters
+}}
 }
 \value{
 vector

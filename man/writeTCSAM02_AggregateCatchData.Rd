@@ -18,21 +18,37 @@ writeTCSAM02_AggregateCatchData(
 )
 }
 \arguments{
-\item{con}{- connection to use (default=stdout)}
+\item{con}{\itemize{
+\item connection to use (default=stdout)
+}}
 
-\item{dfr}{- aggregate catch dataframe to write to connection}
+\item{dfr}{\itemize{
+\item aggregate catch dataframe to write to connection
+}}
 
-\item{type}{- catch type ("ABUNDANCE" or "BIOMASS")}
+\item{type}{\itemize{
+\item catch type ("ABUNDANCE" or "BIOMASS")
+}}
 
-\item{optFit}{- objective function fitting option (e.g., "BY_X","BY_XM")}
+\item{optFit}{\itemize{
+\item objective function fitting option (e.g., "BY_X","BY_XM")
+}}
 
-\item{likeType}{- likelihood type}
+\item{likeType}{\itemize{
+\item likelihood type
+}}
 
-\item{likeWgt}{- likelihood weight (multiplier)}
+\item{likeWgt}{\itemize{
+\item likelihood weight (multiplier)
+}}
 
-\item{unitsIn}{- input catch units}
+\item{unitsIn}{\itemize{
+\item input catch units
+}}
 
-\item{unitsOut}{- output catch units}
+\item{unitsOut}{\itemize{
+\item output catch units
+}}
 }
 \value{
 Invisibly returns the connection \code{con} to allow piping.
@@ -43,11 +59,11 @@ Function to write aggregate catch data to a connection in TCSAM02 input format.
 \details{
 The input dataframe should have the following column names
 \itemize{
-  \item{year}
-  \item{sex}
-  \item{maturity}
-  \item{shell condition}
-  \item{value - value column}
-  \item{cv - cv column}
+\item{year}
+\item{sex}
+\item{maturity}
+\item{shell condition}
+\item{value - value column}
+\item{cv - cv column}
 }
 }

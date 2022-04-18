@@ -10,12 +10,16 @@ calcPrMoltToMaturity(
 )
 }
 \arguments{
-\item{coeffs}{- a named list identifying function type and coefficient values}
+\item{coeffs}{\itemize{
+\item a named list identifying function type and coefficient values
+}}
 
-\item{sizes}{- sizes at which to evaluate the function}
+\item{sizes}{\itemize{
+\item sizes at which to evaluate the function
+}}
 }
 \description{
-Function to calculate the probability at crab size z for the 
+Function to calculate the probability at crab size z for the
 molt to maturity, pr(mature|z). Note that it is up to the user to define whether
 "size" refers to pre-molt or post-molt size. If pre-molt, then pr(mature|z) is the
 probability of molting to maturity (terminal molt) on the NEXT molt whereas if size is post-molt
