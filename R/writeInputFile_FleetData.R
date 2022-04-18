@@ -122,14 +122,14 @@ writeInputFile_FleetData<-function(con=stdout(),
     if(!hasEff){
       cat("#---no data---\n",file=con);
     } else {
-        con = writeTCSAM_EffortData(con=con,
-                                    closed=closed,
-                                    dfr=lstEff$dfr,
-                                    avgInterval=lstEff$avgInterval,
-                                    likeType=lstEff$likeType,
-                                    likeWgt=lstEff$likeWgt,
-                                    unitsIn=lstEff$unitsIn,
-                                    unitsOut=lstEff$unitsOut);
+        con = writeTCSAM02_EffortData(con=con,
+                                      closed=closed,
+                                      dfr=lstEff$dfr,
+                                      avgInterval=lstEff$avgInterval,
+                                      likeType=lstEff$likeType,
+                                      likeWgt=lstEff$likeWgt,
+                                      unitsIn=lstEff$unitsIn,
+                                      unitsOut=lstEff$unitsOut);
     } #--hasEff
 
     return(invisible(con));
