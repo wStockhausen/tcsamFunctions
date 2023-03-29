@@ -3,19 +3,19 @@
 #'
 #' @description Function to write fleet data to a TCSAM input file.
 #'
-#' @param con - connection to write to
-#' @param fleet - TCSAM fleet name
-#' @param type - fleet type ('FISHERY' or 'SURVEY')
-#' @param closed - vector of years when fishery was closed, if fleet is a fishery
-#' @param lstRC - list with retained catch information (see [details])
-#' @param lstTC - list with total catch information (see [details])
-#' @param lstDC - list with discard catch information (see [details])
-#' @param lstIC - list with index catch information (see [details])
-#' @param lstEff - list with effort data information
+#' @param con : connection to write to
+#' @param fleet : TCSAM fleet name
+#' @param type : fleet type ('FISHERY' or 'SURVEY')
+#' @param closed : vector of years when fishery was closed, if fleet is a fishery
+#' @param lstRC : list with retained catch information (see Details)
+#' @param lstTC : list with total catch information (see Details)
+#' @param lstDC : list with discard catch information (see Details)
+#' @param lstIC : list with index catch information (see Details)
+#' @param lstEff : list with effort data information
 #'
 #' @return Invisibly returns the connection to facilitate piping.
 #'
-#' @details 
+#' @details Writes fleet-specific data file in TCSAM02 format.
 #' 
 #' The input lists \code{lstRC}, \code{lstTC}, \code{lstDC}, and \code{lstIC}
 #' must have the following structure, if not NULL:

@@ -14,29 +14,17 @@ inputList_EffortData(
 )
 }
 \arguments{
-\item{dfr}{\itemize{
-\item effort data dataframe
-}}
+\item{dfr}{: effort data dataframe}
 
-\item{avgInterval}{\itemize{
-\item averaging interval (e.g., "\link{1992:-1}")
-}}
+\item{avgInterval}{: averaging interval (e.g., \code{[1992:-1]})}
 
-\item{likeType}{\itemize{
-\item likelihood type ("NORM2","NORMAL",or "LOGNORMAL")
-}}
+\item{likeType}{: likelihood type ("NORM2","NORMAL",or "LOGNORMAL")}
 
-\item{likeWgt}{\itemize{
-\item likelihood weight (multiplier)
-}}
+\item{likeWgt}{: likelihood weight (multiplier)}
 
-\item{unitsIn}{\itemize{
-\item input effort units ("ONES","MILLIONS")
-}}
+\item{unitsIn}{: input effort units ("ONES","MILLIONS")}
 
-\item{unitsOut}{\itemize{
-\item output effort units ("ONES","MILLIONS")
-}}
+\item{unitsOut}{: output effort units ("ONES","MILLIONS")}
 }
 \value{
 a list (see Details).

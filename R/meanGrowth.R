@@ -102,6 +102,8 @@ calcMeanGrowth.DonaldsonEtAl1981<-function(zBs){
 #' 
 #' @details Port of TCSAM02 size transition calculations from ADMB to R
 #' 
+#' @importFrom stats pgamma
+#' 
 #' @export
 #' 
 calcSizeTransitionMtrix.tcsam02<-function(zBs,

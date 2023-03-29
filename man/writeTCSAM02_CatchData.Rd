@@ -14,29 +14,17 @@ writeTCSAM02_CatchData(
 )
 }
 \arguments{
-\item{con}{\itemize{
-\item connection (default = stdout())
-}}
+\item{con}{: connection (default = stdout())}
 
-\item{type}{\itemize{
-\item data type ("RETAINED","TOTAL","DISCARD" or "INDEX")
-}}
+\item{type}{: data type ("RETAINED","TOTAL","DISCARD" or "INDEX")}
 
-\item{closed}{\itemize{
-\item vector of years when fishery was closed (if fleet is a fishery)
-}}
+\item{closed}{: vector of years when fishery was closed (if fleet is a fishery)}
 
-\item{lstAbd}{\itemize{
-\item list with abundance data information (see \link{inputList_AggregateCatchData})
-}}
+\item{lstAbd}{: list with abundance data information (see \link{inputList_AggregateCatchData})}
 
-\item{lstBio}{\itemize{
-\item list with biomass data information (see \link{inputList_AggregateCatchData})
-}}
+\item{lstBio}{: list with biomass data information (see \link{inputList_AggregateCatchData})}
 
-\item{lstZCs}{\itemize{
-\item list with size comps data information (see \link{inputList_SizeCompsData})
-}}
+\item{lstZCs}{: list with size comps data information (see \link{inputList_SizeCompsData})}
 }
 \value{
 Invisibly returns the connection to facilitate piping.

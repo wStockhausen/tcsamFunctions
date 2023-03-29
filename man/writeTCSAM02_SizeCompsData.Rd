@@ -18,45 +18,25 @@ writeTCSAM02_SizeCompsData(
 )
 }
 \arguments{
-\item{con}{\itemize{
-\item connection to use (default=stdout)
-}}
+\item{con}{: connection to use (default=stdout)}
 
-\item{dfrZCs}{\itemize{
-\item size comps dataframe to write to connection
-}}
+\item{dfrZCs}{: size comps dataframe to write to connection}
 
-\item{dfrSSs}{\itemize{
-\item sample size dataframe corresponding to dfrZCs
-}}
+\item{dfrSSs}{: sample size dataframe corresponding to dfrZCs}
 
-\item{cutpts}{\itemize{
-\item vector of cutpoints that were used to create the size comps
-}}
+\item{cutpts}{: vector of cutpoints that were used to create the size comps}
 
-\item{tail_compression}{\itemize{
-\item two-element vector of compresssion factors
-}}
+\item{tail_compression}{: two-element vector of compresssion factors}
 
-\item{optFit}{\itemize{
-\item objective function fitting option (e.g., "BY_X","BY_XM")
-}}
+\item{optFit}{: objective function fitting option (e.g., "BY_X","BY_XM")}
 
-\item{likeType}{\itemize{
-\item likelihood type ("MULTINOMIAL" or "DIRICHLET-MULTINOMIAL")
-}}
+\item{likeType}{: likelihood type ("MULTINOMIAL" or "DIRICHLET-MULTINOMIAL")}
 
-\item{likeWgt}{\itemize{
-\item likelihood weight (multiplier)
-}}
+\item{likeWgt}{: likelihood weight (multiplier)}
 
-\item{unitsIn}{\itemize{
-\item input catch units ("ONES" or "MILLIONS")
-}}
+\item{unitsIn}{: input catch units ("ONES" or "MILLIONS")}
 
-\item{unitsOut}{\itemize{
-\item output catch units ("MILLIONS" or "ONES)
-}}
+\item{unitsOut}{: output catch units ("MILLIONS" or "ONES)}
 }
 \value{
 Invisibly returns the connection \code{con} to allow piping.

@@ -3,12 +3,12 @@
 #'
 #' @description Function to write catcht data type (retained catch, total catch, discard catch, index catch) to a connection.
 #'
-#' @param con - connection (default = stdout())
-#' @param type - data type ("RETAINED","TOTAL","DISCARD" or "INDEX")
-#' @param closed - vector of years when fishery was closed (if fleet is a fishery)
-#' @param lstAbd - list with abundance data information (see \link{inputList_AggregateCatchData})
-#' @param lstBio - list with biomass data information (see \link{inputList_AggregateCatchData})
-#' @param lstZCs - list with size comps data information (see \link{inputList_SizeCompsData})
+#' @param con : connection (default = stdout())
+#' @param type : data type ("RETAINED","TOTAL","DISCARD" or "INDEX")
+#' @param closed : vector of years when fishery was closed (if fleet is a fishery)
+#' @param lstAbd : list with abundance data information (see \link{inputList_AggregateCatchData})
+#' @param lstBio : list with biomass data information (see \link{inputList_AggregateCatchData})
+#' @param lstZCs : list with size comps data information (see \link{inputList_SizeCompsData})
 #'
 #' @return Invisibly returns the connection to facilitate piping.
 #'

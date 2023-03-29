@@ -3,16 +3,16 @@
 #' 
 #' @description Function to write size composition data to a connection in TCSAM02 input format.
 #' 
-#' @param con - connection to use (default=stdout)
-#' @param dfrZCs - size comps dataframe to write to connection
-#' @param dfrSSs - sample size dataframe corresponding to dfrZCs
-#' @param cutpts - vector of cutpoints that were used to create the size comps
-#' @param tail_compression - two-element vector of compresssion factors
-#' @param optFit - objective function fitting option (e.g., "BY_X","BY_XM")
-#' @param likeType - likelihood type ("MULTINOMIAL" or "DIRICHLET-MULTINOMIAL")
-#' @param likeWgt - likelihood weight (multiplier)
-#' @param unitsIn - input catch units ("ONES" or "MILLIONS")
-#' @param unitsOut - output catch units ("MILLIONS" or "ONES)
+#' @param con : connection to use (default=stdout)
+#' @param dfrZCs : size comps dataframe to write to connection
+#' @param dfrSSs : sample size dataframe corresponding to dfrZCs
+#' @param cutpts : vector of cutpoints that were used to create the size comps
+#' @param tail_compression : two-element vector of compresssion factors
+#' @param optFit : objective function fitting option (e.g., "BY_X","BY_XM")
+#' @param likeType : likelihood type ("MULTINOMIAL" or "DIRICHLET-MULTINOMIAL")
+#' @param likeWgt : likelihood weight (multiplier)
+#' @param unitsIn : input catch units ("ONES" or "MILLIONS")
+#' @param unitsOut : output catch units ("MILLIONS" or "ONES)
 #' 
 #' @return Invisibly returns the connection \code{con} to allow piping.
 #' 

@@ -19,41 +19,23 @@ inputList_AggregateCatchData(
 )
 }
 \arguments{
-\item{type}{\itemize{
-\item type of aggregate catch data ("ABUNDANCE" or "BIOMASS")
-}}
+\item{type}{: type of aggregate catch data ("ABUNDANCE" or "BIOMASS")}
 
-\item{dfr}{\itemize{
-\item the dataframe
-}}
+\item{dfr}{: the dataframe}
 
-\item{cv}{\itemize{
-\item the default cv (NULL to use cv's from \code{dfr})
-}}
+\item{cv}{: the default cv (NULL to use cv's from \code{dfr})}
 
-\item{minErr}{\itemize{
-\item minimum assumed error in catch data (in 1's or kg, depending on \code{type})
-}}
+\item{minErr}{: minimum assumed error in catch data (in 1's or kg, depending on \code{type})}
 
-\item{optFit}{\itemize{
-\item objective function fitting option (e.g., "BY_X","BY_XM")
-}}
+\item{optFit}{: objective function fitting option (e.g., "BY_X","BY_XM")}
 
-\item{likeType}{\itemize{
-\item likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")
-}}
+\item{likeType}{: likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")}
 
-\item{likeWgt}{\itemize{
-\item likelihood multiplier
-}}
+\item{likeWgt}{: likelihood multiplier}
 
-\item{unitsIn}{\itemize{
-\item units for input data (possibilities depend on \code{type})
-}}
+\item{unitsIn}{: units for input data (possibilities depend on \code{type})}
 
-\item{unitsOut}{\itemize{
-\item units for output data (possibilities depend on \code{type})
-}}
+\item{unitsOut}{: units for output data (possibilities depend on \code{type})}
 }
 \value{
 a list (see Details).

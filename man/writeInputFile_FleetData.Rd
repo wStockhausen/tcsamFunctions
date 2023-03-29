@@ -17,41 +17,23 @@ writeInputFile_FleetData(
 )
 }
 \arguments{
-\item{con}{\itemize{
-\item connection to write to
-}}
+\item{con}{: connection to write to}
 
-\item{fleet}{\itemize{
-\item TCSAM fleet name
-}}
+\item{fleet}{: TCSAM fleet name}
 
-\item{type}{\itemize{
-\item fleet type ('FISHERY' or 'SURVEY')
-}}
+\item{type}{: fleet type ('FISHERY' or 'SURVEY')}
 
-\item{closed}{\itemize{
-\item vector of years when fishery was closed, if fleet is a fishery
-}}
+\item{closed}{: vector of years when fishery was closed, if fleet is a fishery}
 
-\item{lstRC}{\itemize{
-\item list with retained catch information (see \link{details})
-}}
+\item{lstRC}{: list with retained catch information (see Details)}
 
-\item{lstTC}{\itemize{
-\item list with total catch information (see \link{details})
-}}
+\item{lstTC}{: list with total catch information (see Details)}
 
-\item{lstDC}{\itemize{
-\item list with discard catch information (see \link{details})
-}}
+\item{lstDC}{: list with discard catch information (see Details)}
 
-\item{lstIC}{\itemize{
-\item list with index catch information (see \link{details})
-}}
+\item{lstIC}{: list with index catch information (see Details)}
 
-\item{lstEff}{\itemize{
-\item list with effort data information
-}}
+\item{lstEff}{: list with effort data information}
 }
 \value{
 Invisibly returns the connection to facilitate piping.
@@ -60,6 +42,8 @@ Invisibly returns the connection to facilitate piping.
 Function to write fleet data to a TCSAM input file.
 }
 \details{
+Writes fleet-specific data file in TCSAM02 format.
+
 The input lists \code{lstRC}, \code{lstTC}, \code{lstDC}, and \code{lstIC}
 must have the following structure, if not NULL:
 \itemize{

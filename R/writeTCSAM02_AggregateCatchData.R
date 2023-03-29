@@ -3,14 +3,14 @@
 #' 
 #' @description Function to write aggregate catch data to a connection in TCSAM02 input format.
 #' 
-#' @param con - connection to use (default=stdout)
-#' @param dfr - aggregate catch dataframe to write to connection
-#' @param type - catch type ("ABUNDANCE" or "BIOMASS")
-#' @param optFit - objective function fitting option (e.g., "BY_X","BY_XM")
-#' @param likeType - likelihood type
-#' @param likeWgt - likelihood weight (multiplier)
-#' @param unitsIn - input catch units
-#' @param unitsOut - output catch units
+#' @param con : connection to use (default=stdout)
+#' @param dfr : aggregate catch dataframe to write to connection
+#' @param type : catch type ("ABUNDANCE" or "BIOMASS")
+#' @param optFit : objective function fitting option (e.g., "BY_X","BY_XM")
+#' @param likeType : likelihood type
+#' @param likeWgt : likelihood weight (multiplier)
+#' @param unitsIn : input catch units
+#' @param unitsOut : output catch units
 #' 
 #' @return Invisibly returns the connection \code{con} to allow piping.
 #' 

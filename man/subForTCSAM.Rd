@@ -7,13 +7,9 @@
 subForTCSAM(x, str)
 }
 \arguments{
-\item{x}{\itemize{
-\item character vector on which to make substitutions
-}}
+\item{x}{: character vector on which to make substitutions}
 
-\item{str}{\itemize{
-\item string to substitute
-}}
+\item{str}{: string to substitute}
 }
 \value{
 modified character vector

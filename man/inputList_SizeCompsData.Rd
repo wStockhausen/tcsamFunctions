@@ -17,39 +17,23 @@ inputList_SizeCompsData(
 )
 }
 \arguments{
-\item{dfrZCs}{\itemize{
-\item size comps dataframe
-}}
+\item{dfrZCs}{: size comps dataframe}
 
-\item{dfrSSs}{\itemize{
-\item sample sizes dataframe
-}}
+\item{dfrSSs}{: sample sizes dataframe}
 
-\item{cutpts}{\itemize{
-\item vector of cutpoints for size comps
-}}
+\item{cutpts}{: vector of cutpoints for size comps}
 
-\item{tail_compression}{\itemize{
-\item 2-element vector giving tail compression factors
-}}
+\item{tail_compression}{: 2-element vector giving tail compression factors}
 
-\item{optFit}{\itemize{
-\item objective function fitting option (e.g., "BY_X","BY_XM")
-}}
+\item{optFit}{: objective function fitting option (e.g., "BY_X","BY_XM")}
 
-\item{likeType}{\itemize{
-\item likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")
-}}
+\item{likeType}{: likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")}
 
 \item{likeWgt}{-likelihood multiplier}
 
-\item{unitsIn}{\itemize{
-\item units for input data ("ONES" or "MILLIONS")
-}}
+\item{unitsIn}{: units for input data ("ONES" or "MILLIONS")}
 
-\item{unitsOut}{\itemize{
-\item units for output data ("ONES" or "MILLIONS")
-}}
+\item{unitsOut}{: units for output data ("ONES" or "MILLIONS")}
 }
 \value{
 a list (see Details).

@@ -3,22 +3,22 @@
 #'
 #'@description Function to plot a matrix or list of matrices using a bubble plot.
 #'
-#' @param lst - list or matrix
-#' @param x - column name for x axis
-#' @param x.lbl - label for x axis
-#' @param y - column name for y axis
-#' @param y.lbl - label for y axis
-#' @param z - column name for bubble sizes
-#' @param z.lbl - label for sizes
-#' @param fill - column name for bubble fill colours
-#' @param fill.lbl - label for fills
-#' @param scaleBy - value to scale bubbles by
-#' @param normalize - flag (T/F) to normalize sums to 1
-#' @param  xlims - x-axis limits (or NULL)
-#' @param  ylims - y-axis limits (or NULL)
-#' @param colors - color palette to use (default is \code{RColorBrewer::brewer.pal(11,"Spectral")})
-#' @param alpha - transparency level
-#' @param showPlot - flag to print plot
+#' @param lst : list or matrix
+#' @param x : column name for x axis
+#' @param x.lbl : label for x axis
+#' @param y : column name for y axis
+#' @param y.lbl : label for y axis
+#' @param z : column name for bubble sizes
+#' @param z.lbl : label for sizes
+#' @param fill : column name for bubble fill colours
+#' @param fill.lbl : label for fills
+#' @param scaleBy : value to scale bubbles by
+#' @param normalize : flag (T/F) to normalize sums to 1
+#' @param  xlims : x-axis limits (or NULL)
+#' @param  ylims : y-axis limits (or NULL)
+#' @param colors : color palette to use (default is \code{RColorBrewer::brewer.pal(11,"Spectral")})
+#' @param alpha : transparency level
+#' @param showPlot : flag to print plot
 #' 
 #'@importFrom reshape2 melt
 #'@importFrom RColorBrewer brewer.pal

@@ -5,8 +5,8 @@
 \title{Calculate a size transition matrix}
 \usage{
 calcSizeTransitionMatrix(
-  coeffs = list(type = "LinearGrowthIncrement", a = 0.7, b = 0.883118, beta = 0.75,
-    maxDZ = 50),
+  coeffs = list(type = "LinearGrowthIncrement", a = 0.7, b = 0.883118, beta = 0.75, maxDZ
+    = 50),
   sizes = seq(from = 25, to = 185, by = 1),
   showPlot = FALSE,
   log = FALSE,
@@ -14,30 +14,15 @@ calcSizeTransitionMatrix(
 )
 }
 \arguments{
-\item{coeffs}{\itemize{
-\item list including function 'type' and parameter values
-}}
+\item{coeffs}{: list including function 'type' and parameter values}
 
-\item{sizes}{\itemize{
-\item vector of sizes at which to calculate the sie transition probabilities
-}}
+\item{sizes}{: vector of sizes at which to calculate the sie transition probabilities}
 
-\item{showPlot}{\itemize{
-\item flag (T/F) to plot the matrix
-}}
+\item{showPlot}{: flag (T/F) to plot the matrix}
 
-\item{log}{\itemize{
-\item flag to use ln-scale on plot
-}}
+\item{log}{: flag to use ln-scale on plot}
 
-\item{colors}{\itemize{
-\item palette to use to color the plot
-}}
-}
-\value{
-\itemize{
-\item NULL
-}
+\item{colors}{: palette to use to color the plot}
 }
 \description{
 Function to calculate a size transition matrix.

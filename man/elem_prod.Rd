@@ -2,7 +2,7 @@
 % Please edit documentation in R/admbFunctions.R
 \name{elem_prod}
 \alias{elem_prod}
-\title{Implemetation of ADMB function "elem_prod"}
+\title{Implementation of ADMB function "elem_prod"}
 \usage{
 elem_prod(x, y)
 }

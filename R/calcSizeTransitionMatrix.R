@@ -3,13 +3,13 @@
 #' 
 #' @description Function to calculate a size transition matrix.
 #'
-#' @param coeffs - list including function 'type' and parameter values
-#' @param sizes - vector of sizes at which to calculate the sie transition probabilities
-#' @param showPlot - flag (T/F) to plot the matrix
-#' @param log - flag to use ln-scale on plot
-#' @param colors - palette to use to color the plot
+#' @param coeffs : list including function 'type' and parameter values
+#' @param sizes : vector of sizes at which to calculate the sie transition probabilities
+#' @param showPlot : flag (T/F) to plot the matrix
+#' @param log : flag to use ln-scale on plot
+#' @param colors : palette to use to color the plot
 #' 
-#' @return - NULL
+#' @return NULL
 #' 
 #' @details If 
 #' * 'type'='LinearGrowthIncrement', calls \code{calcSizeTransitionMatrix.LinearGrowthIncrement}.

@@ -16,37 +16,21 @@ writeTCSAM02_EffortData(
 )
 }
 \arguments{
-\item{con}{\itemize{
-\item connection to use (default=stdout)
-}}
+\item{con}{: connection to use (default=stdout)}
 
-\item{dfr}{\itemize{
-\item effort data dataframe to write to connection
-}}
+\item{dfr}{: effort data dataframe to write to connection}
 
-\item{closed}{\itemize{
-\item vector of closure years (or NULL)
-}}
+\item{closed}{: vector of closure years (or NULL)}
 
-\item{avgInterval}{\itemize{
-\item averaging interval (e.g., "[1992:-1]")
-}}
+\item{avgInterval}{: averaging interval (e.g., "[1992:-1]")}
 
-\item{likeType}{\itemize{
-\item likelihood type ("NORM2","NORMAL",or "LOGNORMAL")
-}}
+\item{likeType}{: likelihood type ("NORM2","NORMAL",or "LOGNORMAL")}
 
-\item{likeWgt}{\itemize{
-\item likelihood weight (multiplier)
-}}
+\item{likeWgt}{: likelihood weight (multiplier)}
 
-\item{unitsIn}{\itemize{
-\item input effort units ("ONES","MILLIONS")
-}}
+\item{unitsIn}{: input effort units ("ONES","MILLIONS")}
 
-\item{unitsOut}{\itemize{
-\item output effort units ("ONES","MILLIONS")
-}}
+\item{unitsOut}{: output effort units ("ONES","MILLIONS")}
 }
 \value{
 Invisibly returns the connection \code{con} to allow piping.

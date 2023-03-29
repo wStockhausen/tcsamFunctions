@@ -33,7 +33,7 @@ square<-function(x){
 }
 
 #'
-#' @title Implemetation of ADMB function "elem_prod"
+#' @title Implementation of ADMB function "elem_prod"
 #'
 #' @description Function that implements ADMB function "elem_prod"
 #'

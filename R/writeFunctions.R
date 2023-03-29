@@ -3,8 +3,8 @@
 #' 
 #' @description Function to make substitutions for "undetermined".
 #' 
-#' @param x - character vector on which to make substitutions
-#' @param str - string to substitute
+#' @param x : character vector on which to make substitutions
+#' @param str : string to substitute
 #' 
 #' @return modified character vector
 #' 
@@ -22,8 +22,8 @@ return(xp);
 #' 
 #' @description Function to get multiplicative scale factor from input abundance units to output units.
 #' 
-#' @param unitsIn - units for input data
-#' @param unitsOut - units for output data
+#' @param unitsIn : units for input data
+#' @param unitsOut : units for output data
 #' 
 #' @return multiplicative scale: output = scale * input.
 #' 
@@ -58,8 +58,8 @@ getScaleForAbundance<-function(unitsIn,unitsOut){
 #' 
 #' @description Function to get multiplicative scale factor from input biomass units to output units.
 #' 
-#' @param unitsIn - units for input data
-#' @param unitsOut - units for output data
+#' @param unitsIn : units for input data
+#' @param unitsOut : units for output data
 #' 
 #' @return multiplicative scale: output = scale * input.
 #' 
@@ -97,15 +97,15 @@ getScaleForBiomass<-function(unitsIn,unitsOut){
 #' 
 #' @description Function to create an input list for aggregate catch data.
 #' 
-#' @param type - type of aggregate catch data ("ABUNDANCE" or "BIOMASS")
-#' @param dfr - the dataframe
-#' @param cv - the default cv (NULL to use cv's from \code{dfr})
-#' @param minErr - minimum assumed error in catch data (in 1's or kg, depending on \code{type})
-#' @param optFit - objective function fitting option (e.g., "BY_X","BY_XM")
-#' @param likeType - likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")
-#' @param likeWgt - likelihood multiplier
-#' @param unitsIn - units for input data (possibilities depend on \code{type})
-#' @param unitsOut - units for output data (possibilities depend on \code{type})
+#' @param type : type of aggregate catch data ("ABUNDANCE" or "BIOMASS")
+#' @param dfr : the dataframe
+#' @param cv : the default cv (NULL to use cv's from \code{dfr})
+#' @param minErr : minimum assumed error in catch data (in 1's or kg, depending on \code{type})
+#' @param optFit : objective function fitting option (e.g., "BY_X","BY_XM")
+#' @param likeType : likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")
+#' @param likeWgt : likelihood multiplier
+#' @param unitsIn : units for input data (possibilities depend on \code{type})
+#' @param unitsOut : units for output data (possibilities depend on \code{type})
 #' 
 #' @return a list (see Details).
 #' 
@@ -161,15 +161,15 @@ inputList_AggregateCatchData<-function(type=c("ABUNDANCE","BIOMASS"),
 #' 
 #' @description Function to create an input list for size comps data.
 #' 
-#' @param dfrZCs - size comps dataframe
-#' @param dfrSSs - sample sizes dataframe
-#' @param cutpts - vector of cutpoints for size comps
-#' @param tail_compression - 2-element vector giving tail compression factors
-#' @param optFit - objective function fitting option (e.g., "BY_X","BY_XM")
-#' @param likeType - likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")
+#' @param dfrZCs : size comps dataframe
+#' @param dfrSSs : sample sizes dataframe
+#' @param cutpts : vector of cutpoints for size comps
+#' @param tail_compression : 2-element vector giving tail compression factors
+#' @param optFit : objective function fitting option (e.g., "BY_X","BY_XM")
+#' @param likeType : likelihood type ("NORM2", "NORMAL" or "LOGNORMAL")
 #' @param likeWgt -likelihood multiplier
-#' @param unitsIn - units for input data ("ONES" or "MILLIONS")
-#' @param unitsOut - units for output data ("ONES" or "MILLIONS")
+#' @param unitsIn : units for input data ("ONES" or "MILLIONS")
+#' @param unitsOut : units for output data ("ONES" or "MILLIONS")
 #' 
 #' @return a list (see Details).
 #' 
@@ -217,12 +217,12 @@ inputList_SizeCompsData<-function(dfrZCs=NULL,
 #' 
 #' @description Function to create an input list for effort data.
 #' 
-#' @param dfr - effort data dataframe
-#' @param avgInterval - averaging interval (e.g., "[1992:-1]")
-#' @param likeType - likelihood type ("NORM2","NORMAL",or "LOGNORMAL")
-#' @param likeWgt - likelihood weight (multiplier)
-#' @param unitsIn - input effort units ("ONES","MILLIONS")
-#' @param unitsOut - output effort units ("ONES","MILLIONS")
+#' @param dfr : effort data dataframe
+#' @param avgInterval : averaging interval (e.g., \code{[1992:-1]})
+#' @param likeType : likelihood type ("NORM2","NORMAL",or "LOGNORMAL")
+#' @param likeWgt : likelihood weight (multiplier)
+#' @param unitsIn : input effort units ("ONES","MILLIONS")
+#' @param unitsOut : output effort units ("ONES","MILLIONS")
 #' 
 #' @return a list (see Details).
 #' 

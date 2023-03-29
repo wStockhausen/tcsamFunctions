@@ -3,16 +3,16 @@
 #'
 #'@description Logistic function for Pr(mature|size) for new shell males
 #'   based on Rugolo and Turnock's fitted logistic curve. Parameters are based on my fit to their curve.
-
 #'
-#'@param z - size (mm CW)
-#'@param shell_condition - \sQuote{NEW_SHELL} or \sQuote{OLD_SHELL}
-#'@param z50 - size at 50\% maturity
-#'@param slp - slope for logistic curve (\eqn{mm^{-1}})
+#'@param z : size (mm CW)
+#'@param shell_condition : \sQuote{NEW_SHELL} or \sQuote{OLD_SHELL}
+#'@param z50 : size at 50% maturity
+#'@param slp : slope for logistic curve (\eqn{mm^{-1}})
 #'
-#'@return a vector of Pr(mature|z) corresponding to the input sizes
+#'@return a vector of Pr(mature|z) corresponding to the input sizes and shell condition classification.
 #'
-#'@details Default parameter values are based on my fit to Rugolo and Turnock's fitted logistic curve.
+#'@details Default parameter values are based on my fit to Rugolo and Turnock's fitted logistic curve. Old shell 
+#'crab are assumed to be terminally-molted, so \eqn{Pr(mature|z)=1} for all sizes \eqn{z}.
 #'
 #'@export
 #'

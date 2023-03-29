@@ -13,7 +13,7 @@
 #'@return a vector of weights corresponding to the input sizes
 #'
 #'@details 'male' and 'female' are lists with named elements 'a' and 'b', whose values
-#'reflect the parameters in the eq: w = a*z^b
+#'reflect the parameters in the eq: \eqn{w = a \cdot z^b}
 #'
 #'@export
 #'

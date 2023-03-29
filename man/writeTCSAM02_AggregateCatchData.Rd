@@ -18,37 +18,21 @@ writeTCSAM02_AggregateCatchData(
 )
 }
 \arguments{
-\item{con}{\itemize{
-\item connection to use (default=stdout)
-}}
+\item{con}{: connection to use (default=stdout)}
 
-\item{dfr}{\itemize{
-\item aggregate catch dataframe to write to connection
-}}
+\item{dfr}{: aggregate catch dataframe to write to connection}
 
-\item{type}{\itemize{
-\item catch type ("ABUNDANCE" or "BIOMASS")
-}}
+\item{type}{: catch type ("ABUNDANCE" or "BIOMASS")}
 
-\item{optFit}{\itemize{
-\item objective function fitting option (e.g., "BY_X","BY_XM")
-}}
+\item{optFit}{: objective function fitting option (e.g., "BY_X","BY_XM")}
 
-\item{likeType}{\itemize{
-\item likelihood type
-}}
+\item{likeType}{: likelihood type}
 
-\item{likeWgt}{\itemize{
-\item likelihood weight (multiplier)
-}}
+\item{likeWgt}{: likelihood weight (multiplier)}
 
-\item{unitsIn}{\itemize{
-\item input catch units
-}}
+\item{unitsIn}{: input catch units}
 
-\item{unitsOut}{\itemize{
-\item output catch units
-}}
+\item{unitsOut}{: output catch units}
 }
 \value{
 Invisibly returns the connection \code{con} to allow piping.

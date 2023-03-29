@@ -12,13 +12,9 @@ calcSizeTransitionMatrices(
 )
 }
 \arguments{
-\item{coeffs}{\itemize{
-\item list of sex-specific lists of growth parameters (a, b, beta)
-}}
+\item{coeffs}{: list of sex-specific lists of growth parameters (a, b, beta)}
 
-\item{sizes}{\itemize{
-\item vector of sizes at which to evaluate
-}}
+\item{sizes}{: vector of sizes at which to evaluate}
 }
 \value{
 list with sex-specific size transition matrices

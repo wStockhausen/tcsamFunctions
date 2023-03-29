@@ -18,41 +18,23 @@ calcSizeTransitionMatrix.LinearGrowthIncrement(
 )
 }
 \arguments{
-\item{a}{\itemize{
-\item "a" coefficient of linear growth increment
-}}
+\item{a}{: "a" coefficient of linear growth increment}
 
-\item{b}{\itemize{
-\item "b" coefficient of linear growth increment
-}}
+\item{b}{: "b" coefficient of linear growth increment}
 
-\item{beta}{\itemize{
-\item gamma distribution scale parameter
-}}
+\item{beta}{: gamma distribution scale parameter}
 
-\item{maxDZ}{\itemize{
-\item max growth increment allowed (truncates potential growth)
-}}
+\item{maxDZ}{: max growth increment allowed (truncates potential growth)}
 
-\item{coeffs}{\itemize{
-\item list with coefficients a, b, beta, maxDZ
-}}
+\item{coeffs}{: list with coefficients a, b, beta, maxDZ}
 
-\item{sizes}{\itemize{
-\item size bins to include in matrix
-}}
+\item{sizes}{: size bins to include in matrix}
 
-\item{showPlot}{\itemize{
-\item flag (T/F) to plot matrix
-}}
+\item{showPlot}{: flag (T/F) to plot matrix}
 
-\item{log}{\itemize{
-\item flag to plot ln-scale matrix (in conjunction w/ showPlot)
-}}
+\item{log}{: flag to plot ln-scale matrix (in conjunction w/ showPlot)}
 
-\item{colors}{\itemize{
-\item palette to plot matrix with
-}}
+\item{colors}{: palette to plot matrix with}
 }
 \value{
 matrix

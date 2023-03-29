@@ -10,13 +10,9 @@ calcPrMoltToMaturity(
 )
 }
 \arguments{
-\item{coeffs}{\itemize{
-\item a named list identifying function type and coefficient values
-}}
+\item{coeffs}{: a named list identifying function type and coefficient values}
 
-\item{sizes}{\itemize{
-\item sizes at which to evaluate the function
-}}
+\item{sizes}{: vector of sizes at which to evaluate the function}
 }
 \description{
 Function to calculate the probability at crab size z for the
@@ -27,5 +23,5 @@ then pr(mature|z) is the probability that a crab that just molted to size z also
 }
 \details{
 coeffs is a named list with the 1st element 'type' identifying the function type (e.g. 'logistic')
-and remaining elements as function coefficients (e.g., slope, z50)
+and remaining elements as function coefficients (e.g., slope, z50).
 }

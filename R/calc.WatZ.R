@@ -13,7 +13,7 @@
 #'@return a vector of weights in g corresponding to the input sizes, sexes, and maturity states
 #'
 #'@details 'male' and 'female' are lists with named elements 'a' and 'b', whose values
-#'reflect the parameters in the eq: w = a*z^b
+#'reflect the parameters in the eq:  \eqn{w = a \cdot z^b}
 #'
 #'@export
 #'

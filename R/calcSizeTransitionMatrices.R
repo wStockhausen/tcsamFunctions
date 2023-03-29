@@ -3,8 +3,8 @@
 #'
 #'@description Function to calculate sex-specific size transition matrices for Tanner crab.
 #'
-#'@param coeffs - list of sex-specific lists of growth parameters (a, b, beta)
-#'@param sizes - vector of sizes at which to evaluate
+#'@param coeffs : list of sex-specific lists of growth parameters (a, b, beta)
+#'@param sizes : vector of sizes at which to evaluate
 #'
 #'@return list with sex-specific size transition matrices
 #'

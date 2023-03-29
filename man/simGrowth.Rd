@@ -18,45 +18,25 @@ simGrowth(
 )
 }
 \arguments{
-\item{ny}{\itemize{
-\item number of years to simulate
-}}
+\item{ny}{: number of years to simulate}
 
-\item{zAtR}{\itemize{
-\item size at recruitment
-}}
+\item{zAtR}{: size at recruitment}
 
-\item{M}{\itemize{
-\item annual rate of natural mortality
-}}
+\item{M}{: annual rate of natural mortality}
 
-\item{prGr}{\itemize{
-\item size transition matrix
-}}
+\item{prGr}{: size transition matrix}
 
-\item{grCoeffs}{\itemize{
-\item growth coefficients (if prGr is not given)
-}}
+\item{grCoeffs}{: growth coefficients (if prGr is not given)}
 
-\item{prM2M}{\itemize{
-\item probability of molt-to-maturity
-}}
+\item{prM2M}{: probability of molt-to-maturity}
 
-\item{m2mCoeffs}{\itemize{
-\item molt-to-maturity coefficients (if prM2M is not given)
-}}
+\item{m2mCoeffs}{: molt-to-maturity coefficients (if prM2M is not given)}
 
-\item{sizes}{\itemize{
-\item vector of size bins
-}}
+\item{sizes}{: vector of size bins}
 
-\item{showPlot}{\itemize{
-\item flag to plot simulation
-}}
+\item{showPlot}{: flag to plot simulation}
 
-\item{normalize}{\itemize{
-\item flag to normalize annual size comps to 1
-}}
+\item{normalize}{: flag to normalize annual size comps to 1}
 }
 \value{
 list with matrices nAtZI and nAtZM representing immature and mature crab abundance

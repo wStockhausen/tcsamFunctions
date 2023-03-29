@@ -3,15 +3,15 @@
 #'
 #'@description Function to calculate a size transition matrix
 #'
-#'@param a - "a" coefficient of linear growth increment
-#'@param b - "b" coefficient of linear growth increment
-#'@param beta - gamma distribution scale parameter
-#'@param maxDZ - max growth increment allowed (truncates potential growth)
-#'@param coeffs - list with coefficients a, b, beta, maxDZ 
-#'@param sizes - size bins to include in matrix
-#'@param showPlot - flag (T/F) to plot matrix
-#'@param log - flag to plot ln-scale matrix (in conjunction w/ showPlot)
-#'@param colors - palette to plot matrix with
+#'@param a : "a" coefficient of linear growth increment
+#'@param b : "b" coefficient of linear growth increment
+#'@param beta : gamma distribution scale parameter
+#'@param maxDZ : max growth increment allowed (truncates potential growth)
+#'@param coeffs : list with coefficients a, b, beta, maxDZ 
+#'@param sizes : size bins to include in matrix
+#'@param showPlot : flag (T/F) to plot matrix
+#'@param log : flag to plot ln-scale matrix (in conjunction w/ showPlot)
+#'@param colors : palette to plot matrix with
 #'
 #'@return matrix
 #'

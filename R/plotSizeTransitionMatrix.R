@@ -3,8 +3,8 @@
 #'
 #'@description Function to plot a growth transition matrix as an image.
 #'
-#'@param prGr - growth transition matrix
-#'@param log - flag to plot ln-scale values
+#'@param prGr : growth transition matrix
+#'@param log : flag to plot ln-scale values
 #'
 #'@return a ggplot2 object
 #'

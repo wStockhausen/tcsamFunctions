@@ -3,21 +3,19 @@
 #'
 #'@description Function to calculate (and optionally plot the components of) a double normal selectivity function.
 #'
-#'@param x - age/size bins at which to compute values
-#'@param params - vector of parameters (see \link{details})
-#'@param showPlot - flag (T/F) to plot components of function
-#'@param test - flag (T/F) to output list with detailed info (T) rather than just vector of sel function values (F)
+#'@param x : age/size bins at which to compute values
+#'@param params : vector of parameters (see Details)
+#'@param showPlot : flag (T/F) to plot components of function
+#'@param test : flag (T/F) to output list with detailed info (T) rather than just vector of sel function values (F)
 #'
-#'@details TBD!!
-#'
-#'params are:
+#'@details The \code{params} vector elements are:
 #' \itemize{
 #'  \item{1: location of ascending peak}
 #'  \item{2: logistic scale width of plateau}
-#'  \item{3: ascending slope  (NOT log scale; i.e. = exp(p[3]) if p[3] from SS)}
-#'  \item{3: descending slope (NOT log scale; i.e. = exp(p[4]) if p[4] from SS)}
-#'  \item{5: logistic scale value in initial bin; i.e. initial = 1./(1.+exp(-params[5]));}
-#'  \item{6: logistic scale value in final bin;   i.e. final   = 1./(1.+exp(-params[6]));}
+#'  \item{3: ascending slope  (NOT log scale; i.e. = exp(p\[3\]) if p\[3\] from SS)}
+#'  \item{3: descending slope (NOT log scale; i.e. = exp(p\[4\]) if p\[4\] from SS)}
+#'  \item{5: logistic scale value in initial bin; i.e. initial = 1./(1.+exp(-params\[5\]));}
+#'  \item{6: logistic scale value in final bin;   i.e. final   = 1./(1.+exp(-params\[6\]));}
 #' }
 #'
 #'@import graphics
@@ -134,18 +132,18 @@ selFcn.DoubleNormal<-function(x,
 #'@description Function to calculate (and optionally plot the components of) a double normal selectivity function 
 #'with "4a" parameterization.
 #'
-#'@param zBs - vector of sizes at which to compute values
-#'@param params - vector of parameters
-#'@param fsZ - max possible size on the "shelf"
-#'@param showPlot - flag (T/F) to plot components of function
+#'@param zBs : vector of sizes at which to compute values
+#'@param params : vector of parameters
+#'@param fsZ : max possible size on the "shelf"
+#'@param showPlot : flag (T/F) to plot components of function
 #'
 #'@details Should replicate TCSAM02 dblnormal4a selectivity function.
 #'
 #'\itemize{
-#' \item{params[1]: size at which ascending limb hits 1}
-#' \item{params[2]: width of ascending limb}
-#' \item{params[3]: scaled size at which descending limb departs from 1}
-#' \item{params[4]: width of descending limb}
+#' \item{params\[1\]: size at which ascending limb hits 1}
+#' \item{params\[2\]: width of ascending limb}
+#' \item{params\[3\]: scaled size at which descending limb departs from 1}
+#' \item{params\[4\]: width of descending limb}
 #'}
 #'
 #'@import ggplot2
@@ -192,17 +190,17 @@ selFcn.DoubleNormal4a<-function(zBs,
 #'@description Function to calculate (and optionally plot the components of) an ascending normal selectivity function 
 #'with "3" parameterization.
 #'
-#'@param zBs - vector of sizes at which to compute values
-#'@param params - vector of parameters
-#'@param fsZ    - max possible size at which selectivity reaches 1
-#'@param showPlot - flag (T/F) to plot components of function
+#'@param zBs : vector of sizes at which to compute values
+#'@param params : vector of parameters
+#'@param fsZ    : max possible size at which selectivity reaches 1
+#'@param showPlot : flag (T/F) to plot components of function
 #'
 #'@details Should replicate TCSAM02 ascnormal3 selectivity function.
 #'
 #'params are:\cr
-#'  1: delta size from max possible (params[4])\cr
-#'  2: ln-scale selectivity at size givens by params[3]\cr
-#'  3: size at selectivity is given by params[2]\cr
+#'  1: delta size from max possible (params\[4\])\cr
+#'  2: ln-scale selectivity at size givens by params\[3\]\cr
+#'  3: size at selectivity is given by params\[2\]\cr
 #'  4: max possible size at which peak is reached
 #'
 #'@import ggplot2
