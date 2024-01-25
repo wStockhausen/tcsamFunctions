@@ -114,7 +114,7 @@ getScaleForBiomass<-function(unitsIn,unitsOut){
 #' Output list has elements:
 #' \itemize{
 #' \item{dfr - dataframe}
-#' \item{cv - default cv (e.g., for fishery data)}
+#' \item{cv - default cv or dataframe with 'year', 'cv', and 'minErr' as columns (e.g., for fishery data)}
 #' \item{minErr - minimum assumed error in catch data (in 1's)}
 #' \item{optFit - objective function fitting option}
 #' \item{likeType - likelihood type}
@@ -145,9 +145,16 @@ inputList_AggregateCatchData<-function(type=c("ABUNDANCE","BIOMASS"),
                                                        c("MILLIONS","ONES"),
                                                        c('THOUSANDS_MT','KG','MILLIONS_LBS'))
                                    ){
+    if(is.numeric(cv)) {
+        cv     = cv[1];
+        minErr = minErr[1];
+    } else {
+        #--alternative is a data.frame
+        minErr = NULL;
+    }
     lst=list(dfr=dfr,
-            cv=cv[1],
-            minErr=minErr[1],
+            cv=cv,
+            minErr=minErr,
             optFit=toupper(optFit[1]),
             likeType=toupper(likeType[1]),
             likeWgt=likeWgt[1],

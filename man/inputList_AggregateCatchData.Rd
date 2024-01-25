@@ -49,7 +49,7 @@ See below:
 Output list has elements:
 \itemize{
 \item{dfr - dataframe}
-\item{cv - default cv (e.g., for fishery data)}
+\item{cv - default cv or dataframe with 'year', 'cv', and 'minErr' as columns (e.g., for fishery data)}
 \item{minErr - minimum assumed error in catch data (in 1's)}
 \item{optFit - objective function fitting option}
 \item{likeType - likelihood type}

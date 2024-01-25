@@ -50,7 +50,16 @@ writeTCSAM02_CatchData<-function(con=stdout(),
     if (!is.null(closed)) dfr %<>% dplyr::filter(!(year %in% closed));
     if (!is.null(lstAbd$cv)) {
         errScl = getScaleForAbundance("ONES",lstAbd$unitsIn);#--need minErr on same scale as values
-        dfr %<>% dplyr::rowwise() %>% dplyr::mutate(cv=max(lstAbd$cv,errScl*lstAbd$minErr/value));#--effective cv
+        if (is.numeric(lstAbd$cv)){
+            dfr %<>% dplyr::rowwise() %>% dplyr::mutate(cv=max(lstAbd$cv,errScl*lstAbd$minErr/value));#--effective cv
+        } else if (inherits(lstAbd$cv,"data.frame")){
+            getCV<-function(year_,value,dfrCVs){
+                rw = dfrCVs |> dplyr::filter(year==year_);
+                cv = max(rw$cv,errScl*rw$minErr/value);
+                return(cv);
+            }
+            dfr %<>% dplyr::rowwise() %>% dplyr::mutate(cv=getCV(year,value,lstAbd$cv));
+        }
     }
     writeTCSAM02_AggregateCatchData(con=con,
                                     dfr=dfr,
@@ -73,7 +82,16 @@ writeTCSAM02_CatchData<-function(con=stdout(),
     if (!is.null(closed)) dfr %<>% dplyr::filter(!(year %in% closed));
     if (!is.null(lstBio$cv)) {
         errScl = getScaleForBiomass("KG",lstBio$unitsIn);#--need minErr on same scale as values
-        dfr %<>% dplyr::rowwise() %>% dplyr::mutate(cv=max(lstBio$cv,errScl*lstBio$minErr/value));#--effective cv
+        if (is.numeric(lstBio$cv)){
+            dfr %<>% dplyr::rowwise() %>% dplyr::mutate(cv=max(lstAbd$cv,errScl*lstAbd$minErr/value));#--effective cv
+        } else if (inherits(lstBio$cv,"data.frame")){
+            getCV<-function(year_,value,dfrCVs){
+                rw = dfrCVs |> dplyr::filter(year==year_);
+                cv = max(rw$cv,errScl*rw$minErr/value);
+                return(cv);
+            }
+            dfr %<>% dplyr::rowwise() %>% dplyr::mutate(cv=getCV(year,value,lstBio$cv));
+        }
     }
     writeTCSAM02_AggregateCatchData(con=con,
                                     dfr=dfr,

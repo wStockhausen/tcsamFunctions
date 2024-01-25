@@ -2,7 +2,7 @@
 #'@title Convert Tanner crab size to weight using the current (2015) relationships
 #'
 #'@description Power-law functions for Tanner crab weight-at-size (g) by sex and maturity
-#'   based on 2015 NMFS survey.
+#'   based on 2015 NMFS survey. 
 #'   
 #'@param z : vector of sizes (mm CW)
 #'@param sex : vector of sexes ('MALE' or 'FEMALE')
@@ -15,6 +15,13 @@
 #'@details 'male' and 'female' are lists with named elements 'a' and 'b', whose values
 #'reflect the parameters in the eq:  \eqn{w = a \cdot z^b}
 #'
+#'For males, the default values are a=0.00027, b=3.022134 for immature, mature, and undetermined.
+#'
+#'For females, the default values are \cr
+#'  a=0.000562, b=2.816928 for immature crab \cr
+#'  a=0.000441, b=2.898686 for mature crab \cr
+#'For females with undetermined maturity, females > 90 mm CW are considered mature.
+#'
 #'@export
 #'
 #-----------------------------------------------------------
@@ -22,8 +29,8 @@ calc.WatZ<-function(z,sex,maturity,
                     male=list(immature    =list(a=0.00027,b=3.022134),
                               mature      =list(a=0.00027,b=3.022134),
                               undetermined=list(a=0.00027,b=3.022134)),
-                    female=list(immature=list(a=0.000562,b=2.816928),
-                                mature  =list(a=0.000441,b=2.898686))){
+                    female=list(immature    =list(a=0.000562,b=2.816928),
+                                mature      =list(a=0.000441,b=2.898686))){
     idx.m<-toupper(sex)=='MALE';
     idx.f<-toupper(sex)=='FEMALE';
     idx.imm<-toupper(maturity)=='IMMATURE';
@@ -34,7 +41,9 @@ calc.WatZ<-function(z,sex,maturity,
          (male$mature$a      *z^male$mature$b      )*(idx.m&idx.mat)+
          (male$undetermined$a*z^male$undetermined$b)*(idx.m&idx.und)+
          (female$immature$a  *z^female$immature$b  )*(idx.f&idx.imm)+
-         (female$mature$a    *z^female$mature$b    )*(idx.f&idx.mat);
+         (female$mature$a    *z^female$mature$b    )*(idx.f&idx.mat)+
+         ((z <90)*(female$immature$a*z^female$immature$b) + 
+          (z>=90)*(female$mature$a  *z^female$mature$b  ))*(idx.f&idx.und);
     
     return(wgt);
 }
