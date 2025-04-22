@@ -35,4 +35,11 @@ based on 2015 NMFS survey.
 \details{
 'male' and 'female' are lists with named elements 'a' and 'b', whose values
 reflect the parameters in the eq:  \eqn{w = a \cdot z^b}
+
+For males, the default values are a=0.00027, b=3.022134 for immature, mature, and undetermined.
+
+For females, the default values are \cr
+a=0.000562, b=2.816928 for immature crab \cr
+a=0.000441, b=2.898686 for mature crab \cr
+For females with undetermined maturity, females > 90 mm CW are considered mature.
 }
